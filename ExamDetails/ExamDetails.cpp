@@ -5,15 +5,17 @@
 #define HALF_HOUR 3
 #define ROUND_HOUR 0
 
+using std::endl;
+using std::string;
 namespace mtm{
-    ExamDetails::ExamDetails(int course, int month, int day, double hour, int length, std::string link) :
+    ExamDetails::ExamDetails(int course, int month, int day, double hour, int length, string link) :
                     course(course), month(month), day(day), hour(hour), length(length), link(link){}
 
-    std::string ExamDetails::getLink() const{
+    string ExamDetails::getLink() const{
         return this->link;
     }
     
-    void ExamDetails::setLink(std::string link){
+    void ExamDetails::setLink(string link){
         this->link = link;
     }
 
@@ -36,9 +38,9 @@ namespace mtm{
 
     std::ostream& operator<<(std::ostream& os, const ExamDetails& exam){
         int time = exam.hour > (int)exam.hour ? HALF_HOUR : ROUND_HOUR; 
-        os << "Course Number: " << exam.course << std::endl 
-        << "Time: " << exam.day << "." << exam.month << " at " << (int)exam.hour << ":" << time << "0" << std::endl
-        << "Duration: " << exam.length << ":00" << std::endl
+        os << "Course Number: " << exam.course << endl 
+        << "Time: " << exam.day << "." << exam.month << " at " << (int)exam.hour << ":" << time << "0" << endl
+        << "Duration: " << exam.length << ":00" << endl
         << "Zoom Link: " << exam.link;
         return os;
     }
