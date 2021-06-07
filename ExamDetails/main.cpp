@@ -15,5 +15,4 @@ int main() {
     std::cout << "Your closest exam is:" << std::endl << closest << std::endl;
 
     cout << exam3 << endl << endl << exam1;
-
 }
