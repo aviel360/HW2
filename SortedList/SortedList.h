@@ -34,5 +34,4 @@ namespace mtm{
         Iterator& operator++(int);
         bool operator!=(const Iterator& it) const;
     };
-
 }

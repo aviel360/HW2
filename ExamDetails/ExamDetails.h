@@ -6,11 +6,12 @@ namespace mtm{
         int month;
         int day;
         double hour;
-        int length;
+        double length;
         std::string link;
         
+
     public:
-        ExamDetails(int course, int month, int day, double hour, int length, std::string link = "");
+        ExamDetails(int course, int month, int day, double hour, double length, std::string link = "");
         ExamDetails() = default;
         ~ExamDetails() = default;
         ExamDetails(const ExamDetails& exam) = default;
@@ -18,10 +19,15 @@ namespace mtm{
         std::string getLink() const;
         void setLink(std::string link);
         int operator-(const ExamDetails& exam) const;
-        bool operator<(const ExamDetails& exam) const;
+        bool operator<(const ExamDetails& exam) const; // ???????????????????
         friend std::ostream& operator<<(std::ostream& os, const ExamDetails& exam);
         static ExamDetails makeMatamExam();
+        class InvalidDateException{};
+        class InvalidTimeException{};
+        class InvalidArgsException{};
     };
-
-
+    
+    bool isDateValid(int month, int day);
+    bool isTimeValid(double hour);
+    bool isLengthValid(double length);
 }
