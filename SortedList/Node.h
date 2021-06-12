@@ -14,24 +14,25 @@ namespace mtm{
         */
 
     public:
-        Node() = default;
+        Node();
         ~Node() = default;
         Node(T value, Node* next = nullptr);
         Node(const Node& node) = default;
         Node& operator=(const Node&);
         bool operator ==(const Node&) const;
         bool operator !=(const Node&) const;
-        Node& getNext() const;
+        Node* getNext() const;
         T& getValue() const;
         void setNext(Node* node);
         void setValue(T the_value);
         
     };
 
-
     template <class T>
-    Node<T>::Node(T the_value, Node* next_node = nullptr) : value(the_value), next(next_node)
-    {}
+    Node<T>::Node() : next(nullptr){}
+    
+    template <class T>
+    Node<T>::Node(T the_value, Node* next_node = nullptr) : value(the_value), next(next_node){}
 
     template <class T>
     Node<T>& Node<T>::operator=(const Node& node) 
@@ -42,51 +43,32 @@ namespace mtm{
     }
 
     template <class T>
-    bool Node<T>::operator ==(const Node& node) const
-    {
-        if (this->value == node.value){
-            if (this->next == node.next){ /*is that recursia?*/
-                return true;
-            }
-        }
-        return false;
+    bool Node<T>::operator ==(const Node& node) const{
+        return (this->value == node.value) && (this->next == node.next);
     }
 
     template <class T>
-    bool Node<T>::operator !=(const Node& node) const
-    {
-        if (*this == node) {
-            return false;
-        }
-        return true;
+    bool Node<T>::operator !=(const Node& node) const{
+        return !(*this == node);
     }
 
     template <class T>
-    Node<T>& Node<T>::getNext() const
-    {
-        return *(this->next);
+    Node<T>* Node<T>::getNext() const{
+        return this->next;
     }
 
     template <class T>
-    T& Node<T>::getValue() const 
-    {
+    T& Node<T>::getValue() const {
         return this->value;
     }
 
     template <class T>
-    void Node<T>::setNext(Node* node)
-    {
+    void Node<T>::setNext(Node* node){
         this->next = node;
     }
 
     template <class T>
-    void Node<T>::setValue(T the_value)
-    {
+    void Node<T>::setValue(T the_value){
         this->value = the_value;
     }
-
-    
-
-
-
 }

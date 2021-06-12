@@ -7,13 +7,13 @@ namespace mtm{
         class Node<T>* first;
 
     public:
+        class const_iterator;
         SortedList();
         SortedList(const SortedList& list);
         ~SortedList();
         SortedList& operator=(const SortedList&);
         void insert(const T& value);
         void remove(const_iterator it);
-        class const_iterator;
         const_iterator begin() const;
         const_iterator end() const;
         int length();
@@ -29,8 +29,8 @@ namespace mtm{
     class const_iterator{
         class Node<T>* current;
 
-        const_iterator(Node<T>* node);//what is that?
-    
+        const_iterator(Node<T>* node);
+
     public:
         const Node<T>& operator*() const;
         const_iterator& operator++();
@@ -65,7 +65,7 @@ namespace mtm{
     }
 
     template <class T>
-    void remove(const_iterator<T> it){
+    void SortedList<T>::remove(const_iterator<T> it){
         Node<T>* ptr = first;
         while(ptr->getNext() != *it){//shouldnt it be "*(it.current)"?
             ptr = ptr->getNext();
@@ -83,7 +83,7 @@ namespace mtm{
         SortedList<T>::~SortedList();
         this(list);
     }
-
+    
     template <class T>
     SortedList<T>::~SortedList(){
         Node<T>* current = first;
@@ -106,12 +106,12 @@ namespace mtm{
     }
 
     template <class T>
-    SortedList<T>::const_iterator SortedList<T>::begin() const{
+    typename SortedList<T>::const_iterator SortedList<T>::begin() const{
         return const_iterator<T>(first->getNext());
     }
 
     template <class T>
-    SortedList<T>::const_iterator SortedList<T>::end() const{
+    typename SortedList<T>::const_iterator SortedList<T>::end() const{
         return const_iterator<T>();
     }
 

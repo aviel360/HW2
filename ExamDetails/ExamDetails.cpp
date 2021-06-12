@@ -20,8 +20,7 @@ using std::string;
 namespace mtm{
     ExamDetails::ExamDetails(int course, int month, int day, double hour, double length, string link) :
                     course(course), month(month), day(day), hour(hour), length(length), link(link){
-        if(!isLengthValid(static_cast<double>(course))){ // ????????????????????
-            //ExamDetails::~ExamDetails(); // ???????????????????????????
+        if(!isLengthValid(static_cast<double>(course))){ 
             throw InvalidArgsException();
         }
         if(!isDateValid(month, day)){
@@ -39,9 +38,7 @@ namespace mtm{
         return this->link;
     }
     
-    void ExamDetails::setLink(string link){
-        this->link = link;
-    }
+    void ExamDetails::setLink(string link){ this->link = link; }
 
     int ExamDetails::operator-(const ExamDetails& exam) const{
         int difference = this->month - exam.month;
