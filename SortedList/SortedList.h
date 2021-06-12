@@ -13,7 +13,7 @@ namespace mtm{
         ~SortedList();
         SortedList& operator=(const SortedList&);
         void insert(const T& value);
-        void remove(const_iterator it);
+        void remove(const_iterator& it);
         const_iterator begin() const;
         const_iterator end() const;
         int length();
@@ -65,7 +65,7 @@ namespace mtm{
     }
 
     template <class T>
-    void SortedList<T>::remove(const_iterator<T> it){
+    void SortedList<T>::remove(const_iterator& it){
         Node<T>* ptr = first;
         while(ptr->getNext() != *it){//shouldnt it be "*(it.current)"?
             ptr = ptr->getNext();

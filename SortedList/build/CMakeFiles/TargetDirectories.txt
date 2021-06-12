@@ -1,0 +1,3 @@
+C:/Users/alonz/Documents/GitHub/HW2/SortedList/build/CMakeFiles/list.dir
+C:/Users/alonz/Documents/GitHub/HW2/SortedList/build/CMakeFiles/edit_cache.dir
+C:/Users/alonz/Documents/GitHub/HW2/SortedList/build/CMakeFiles/rebuild_cache.dir
