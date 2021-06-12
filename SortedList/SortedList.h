@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Node.cpp"
+#include "Node.h"
 
 namespace mtm{
     template <class T>
@@ -17,8 +17,10 @@ namespace mtm{
         const_iterator begin() const;
         const_iterator end() const;
         int length();
+
         template <class Condition>
         SortedList filter(Condition rule) const;
+
         template<class Condition>
         void apply(Condition rule);
     };
@@ -27,7 +29,7 @@ namespace mtm{
     class const_iterator{
         class Node<T>* current;
 
-        const_iterator(Node<T>* node);
+        const_iterator(Node<T>* node);//what is that?
     
     public:
         const Node<T>& operator*() const;
@@ -65,7 +67,7 @@ namespace mtm{
     template <class T>
     void remove(const_iterator<T> it){
         Node<T>* ptr = first;
-        while(ptr->getNext() != *it){
+        while(ptr->getNext() != *it){//shouldnt it be "*(it.current)"?
             ptr = ptr->getNext();
         }
         Node<T>* temp = ptr->getNext();
