@@ -2,6 +2,7 @@
 #include "Node.h"
 
 namespace mtm{
+
     template <class T>
     class SortedList{
         class Node<T>* first;
@@ -13,26 +14,25 @@ namespace mtm{
         ~SortedList();
         SortedList& operator=(const SortedList&);
         void insert(const T& value);
-        void remove(const_iterator it);
+        void remove(const const_iterator& it);
         const_iterator begin() const;
         const_iterator end() const;
         int length();
-
         template <class Condition>
         SortedList filter(Condition rule) const;
 
         template<class Condition>
-        void apply(Condition rule);
+        SortedList apply(Condition rule);
     };
 
     template <class T>
-    class const_iterator{
+    class SortedList<T>::const_iterator{
         class Node<T>* current;
 
         const_iterator(Node<T>* node);
-
+        friend class SortedList;
     public:
-        const Node<T>& operator*() const;
+        const T& operator*() const;
         const_iterator& operator++();
         bool operator==(const const_iterator& it) const;
         bool operator!=(const const_iterator& it) const;
@@ -56,8 +56,8 @@ namespace mtm{
 
     template <class T>
     void SortedList<T>::insert(const T& value){
-        Node<T>* ptr = first->getNext();
-        while(ptr->getValue() < value && ptr->getNext() != nullptr){
+        Node<T>* ptr = first;
+        while(ptr->getNext() != nullptr && ptr->getNext()->getValue() < value){
             ptr = ptr->getNext();
         }
         Node<T>* node = new Node<T>(value,ptr->getNext());
@@ -65,9 +65,9 @@ namespace mtm{
     }
 
     template <class T>
-    void SortedList<T>::remove(const_iterator<T> it){
+    void SortedList<T>::remove(const SortedList<T>::const_iterator &it){
         Node<T>* ptr = first;
-        while(ptr->getNext() != *it){//shouldnt it be "*(it.current)"?
+        while(ptr->getNext()->getValue() != *it){
             ptr = ptr->getNext();
         }
         Node<T>* temp = ptr->getNext();
@@ -76,22 +76,39 @@ namespace mtm{
     }
 
     template <class T>
-    SortedList<T>& SortedList<T>::operator=(const SortedList& list) {
-        if(this == &list) { 
-            return *this; 
-        }
-        SortedList<T>::~SortedList();
-        this(list);
-    }
-    
-    template <class T>
-    SortedList<T>::~SortedList(){
-        Node<T>* current = first;
+    void deleteList(Node<T>* current){
         while(current != nullptr){
             Node<T>* temp = current->getNext();
             delete current;
             current = temp;
         }
+    }
+
+    template <class T>
+    SortedList<T>& SortedList<T>::operator=(const SortedList& list) {
+        if(this == &list) { 
+            return *this; 
+        }
+        Node<T>* ptr = first->getNext();
+        Node<T>* current = list.first->getNext();
+        while(ptr != nullptr){
+            ptr->setValue(current->getValue());
+            current = current->getNext();
+            ptr = ptr->getNext();
+            if(current == nullptr){
+                deleteList(ptr);
+            }
+        }
+        while(current != nullptr){
+            insert(current->getValue());
+            current = current->getNext();
+        }
+        return *this;
+    }
+ 
+    template <class T>
+    SortedList<T>::~SortedList(){
+        deleteList(this->first);
     }
 
     template <class T>
@@ -107,69 +124,70 @@ namespace mtm{
 
     template <class T>
     typename SortedList<T>::const_iterator SortedList<T>::begin() const{
-        return const_iterator<T>(first->getNext());
+        return SortedList<T>::const_iterator(first->getNext());
     }
 
     template <class T>
     typename SortedList<T>::const_iterator SortedList<T>::end() const{
-        return const_iterator<T>();
+        return const_iterator(nullptr);
     }
 
     template<class T>
     template<class Condition>
     SortedList<T> SortedList<T>::filter(Condition rule) const{
-        SortedList<T> list();
+        SortedList<T> list = SortedList<T>();
         Node<T>* ptr = first->getNext();
         while(ptr != nullptr){
             if(rule(ptr->getValue())){
                 list.insert(ptr->getValue());
             }
+            ptr = ptr->getNext();
         }
         return list;
     }
 
     template<class T>
     template<class Condition>
-    void SortedList<T>::apply(Condition rule){
-        SortedList<T> list();
+    SortedList<T> SortedList<T>::apply(Condition rule){
+        SortedList<T> list = SortedList<T>();
         Node<T>* ptr = first->getNext();
         while(ptr != nullptr){
             list.insert(rule(ptr->getValue()));
+            ptr = ptr->getNext();
         }
         return list;
     }
 
     template <class T>
-    const_iterator<T>::const_iterator(Node<T>* node = nullptr){ 
+    SortedList<T>::const_iterator::const_iterator(Node<T>* node){ 
         current = node; 
     }
 
     template <class T>
-    const Node<T>& const_iterator<T>::operator*() const{ 
-        return current;
+    const T& SortedList<T>::const_iterator::operator*() const{ 
+        return current->getValue();
     }
 
     template <class T>
-    const_iterator<T>& const_iterator<T>::operator++(){
+    typename SortedList<T>::const_iterator& SortedList<T>::const_iterator::operator++(){
         current = current->getNext();
         return *this;
     }
 
     template <class T>
-    bool const_iterator<T>::operator==(const const_iterator<T>& it) const{ 
-        return *this == *it;
+    bool SortedList<T>::const_iterator::operator==(const const_iterator& it) const{ 
+        return *this->current == it.current;
     }
 
     template <class T>
-    bool const_iterator<T>::operator!=(const const_iterator<T>& it) const{ 
-        return !(*this == *it);
+    bool SortedList<T>::const_iterator::operator!=(const const_iterator& it) const{ 
+        return !(*this == it);
     }
 
     template <class T>
-    const_iterator<T>& const_iterator<T>::operator++(int){
+    typename SortedList<T>::const_iterator& SortedList<T>::const_iterator::operator++(int){
         const_iterator& temp = *this;
         current = current->getNext();
         return temp;
     }
-
 }

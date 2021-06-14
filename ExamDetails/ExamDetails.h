@@ -18,7 +18,7 @@ namespace mtm{
         std::string getLink() const;
         void setLink(std::string link);
         int operator-(const ExamDetails& exam) const;
-        bool operator<(const ExamDetails& exam) const; // ???????????????????
+        bool operator<(const ExamDetails& exam) const; 
         friend std::ostream& operator<<(std::ostream& os, const ExamDetails& exam);
         static ExamDetails makeMatamExam();
         class InvalidDateException : public std::exception{};

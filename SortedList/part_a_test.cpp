@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include "sortedList.h"
-#include "examDetails.h"
+#include "../ExamDetails/examDetails.h"
 
 using std::cout;
 using std::endl;

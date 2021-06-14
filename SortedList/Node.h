@@ -1,17 +1,11 @@
 #include <iostream>
 
 namespace mtm{
-    //typedef int T;
-
     template <class T>
     class Node{
         T value;
         Node* next;
 
-        /*
-        friend class SortedList;
-        friend class const_iterator;
-        */
 
     public:
         Node();
@@ -19,10 +13,10 @@ namespace mtm{
         Node(T value, Node* next = nullptr);
         Node(const Node& node) = default;
         Node& operator=(const Node&);
-        bool operator ==(const Node&) const;
-        bool operator !=(const Node&) const;
+        bool operator ==(const Node*) const;
+        bool operator !=(const Node*) const;
         Node* getNext() const;
-        T& getValue() const;
+        const T& getValue() ;
         void setNext(Node* node);
         void setValue(T the_value);
         
@@ -32,7 +26,7 @@ namespace mtm{
     Node<T>::Node() : next(nullptr){}
     
     template <class T>
-    Node<T>::Node(T the_value, Node* next_node = nullptr) : value(the_value), next(next_node){}
+    Node<T>::Node(T the_value, Node* next_node) : value(the_value), next(next_node){}
 
     template <class T>
     Node<T>& Node<T>::operator=(const Node& node) 
@@ -43,12 +37,18 @@ namespace mtm{
     }
 
     template <class T>
-    bool Node<T>::operator ==(const Node& node) const{
-        return (this->value == node.value) && (this->next == node.next);
+    bool Node<T>::operator ==(const Node* node) const{
+/*        if(this != nullptr && node == nullptr || this == nullptr && node != nullptr ){
+            return false;
+        }
+        if(this == nullptr && node == nullptr){
+            return true;
+        }*/
+        return (this == node);
     }
 
     template <class T>
-    bool Node<T>::operator !=(const Node& node) const{
+    bool Node<T>::operator !=(const Node* node) const{
         return !(*this == node);
     }
 
@@ -58,7 +58,7 @@ namespace mtm{
     }
 
     template <class T>
-    T& Node<T>::getValue() const {
+    const T& Node<T>::getValue()  {
         return this->value;
     }
 

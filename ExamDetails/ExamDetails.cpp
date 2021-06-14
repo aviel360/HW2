@@ -9,7 +9,7 @@
 #define DAY 28
 #define TIME 13
 #define LENGTH 3
-#define LINK "https:///tinyurl.com/59hzps6m"
+#define LINK "https://tinyurl.com/59hzps6m"
 #define MAX_MONTH 12
 #define MAX_DAY 30
 #define HOURS_IN_DAY 24
@@ -62,7 +62,7 @@ namespace mtm{
         os << "Course Number: " << exam.course << endl 
         << "Time: " << exam.day << "." << exam.month << " at " << (int)exam.hour << ":" << time << "0" << endl
         << "Duration: " << exam.length << ":00" << endl
-        << "Zoom Link: " << exam.link;
+        << "Zoom Link: " << exam.link << endl;
         return os;
     }
 
