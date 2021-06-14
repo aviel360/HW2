@@ -9,13 +9,13 @@ class Character {
     protected:
     int health;
     int ammo;
-    int  range; 
+    int range; 
     int power;
 
     public: 
     virtual ~Character();
     virtual void attack();
-    virtual void move()); 
+    virtual void move(); 
     virtual void reload();
     virtual Character* clone() const = 0;
 };
