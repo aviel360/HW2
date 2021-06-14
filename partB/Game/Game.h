@@ -8,15 +8,13 @@
 
 
 
-
 enum Team { POWERLIFTERS, CROSSFITTERS };
 enum CharacterType {SOLDIER, MEDIC, SNIPER};
 typedef int units_t;
 
-Typedef std::vector<std:vector<std::shared_ptr<Character>>> Board;
+typedef std::vector<std::vector<std::shared_ptr<Character>>> Board;
 
 class Game {
-
     Board board;
 
     public:
@@ -31,6 +29,6 @@ class Game {
     static std::shared_ptr<Character> makeCharacter(CharacterType type, Team team,
                 units_t health, units_t ammo, units_t range, units_t power);
 
-}
+};
 
 #endif

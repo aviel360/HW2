@@ -1,3 +1,6 @@
+#ifndef NODE_H
+#define NODE_H
+
 #include <iostream>
 
 namespace mtm{
@@ -72,3 +75,5 @@ namespace mtm{
         this->value = the_value;
     }
 }
+
+#endif

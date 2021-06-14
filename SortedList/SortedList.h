@@ -1,3 +1,5 @@
+#ifndef SORTEDLIST_H
+#define SORTEDLIST_H
 #include <iostream>
 #include "Node.h"
 
@@ -191,3 +193,5 @@ namespace mtm{
         return temp;
     }
 }
+
+#endif
