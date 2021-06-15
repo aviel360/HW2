@@ -1,3 +1,5 @@
+#ifndef EXAMDETAILS_H
+#define EXAMDETAILS_H
 #include <iostream>
 
 namespace mtm{
@@ -30,3 +32,5 @@ namespace mtm{
     bool isTimeValid(double hour);
     bool isLengthValid(double length);
 }
+
+#endif
