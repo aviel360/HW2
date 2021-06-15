@@ -1,41 +1,50 @@
+#ifndef EXCEPTIONS_H
+#define EXCEPTIONS_H
+
+#include "Game/Game.h"
 #include <exception>
 
+namespace mtm{
+
 /*1*/
-class IllegalArgument:mtm::Exception{
+class IllegalArgument: Exception {
 
 };
 /*2*/
-class IllegalCell:mtm::Exception{
+class IllegalCell : Exception{
 
 };
 
 /*3*/
-class CellEmpty:mtm::Exception{
+class CellEmpty:Exception{
 
 };
 
 /*4*/
-class MoveTooFar:mtm::Exception{
+class MoveTooFar:Exception{
 
 };
 
 /*5*/
-class CellOccupied:mtm::Exception{
+class CellOccupied:Exception{
 
 };
 
 /*6*/
-class OutOfRange:mtm::Exception{
+class OutOfRange:Exception{
 
 };
 
 /*7*/
-class OutOfAmmo:mtm::Exception{
+class OutOfAmmo:Exception{
 
 };
 
 /*8*/
-class IllegalTarget:mtm::Exception{
+class IllegalTarget:
+Exception{
 
 };
+}
 
+#endif

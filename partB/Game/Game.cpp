@@ -1,5 +1,11 @@
 #include "Game.h"
 #include "../Exceptions.h" 
+#include <typeinfo>
+#include "../Medic/Medic.h"
+#include "../Soldier/soldier.h"
+#include "../Sniper/Sniper.h"
+
+
 
 using namespace mtm;
 
@@ -41,12 +47,22 @@ std::shared_ptr<Character> Game::makeCharacter(CharacterType type, Team team,
                 units_t health, units_t ammo , units_t range, units_t power)
 {
     if (!isHealthValid(health) || !isAmmoValid(ammo) || !isRangeValid(range) ||
-                            !isPowerValid(power) || isTypeValid(type) || isTeamValid(team)){
-                throw IllegalArgument();                
+                !isPowerValid(power) || isTypeValid(type) || isTeamValid(team))
+                        {
+                            throw IllegalArgument();                
+                        }
+                     
+    switch(type){
+        case SOLDIER:
+            std::shared_ptr<Character> new_charcter_ptr(new Soldier(team,health,ammo,range,power));
+            return new_charcter_ptr;
+        case MEDIC:
+            std::shared_ptr<Character> new_charcter_ptr(new Medic(team,health,ammo,range,power));
+            return new_charcter_ptr;
+        case SNIPER:
+            std::shared_ptr<Character> new_charcter_ptr(new Sniper(team,health,ammo,range,power));
+            return new_charcter_ptr;
     }
-
-    Character new_charcter(type, team,health,ammo,range,power); 
-    return new_charcter;
 }
 
 void Game::move(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
@@ -64,8 +80,8 @@ void Game::move(const GridPoint & src_coordinates, const GridPoint & dst_coordin
         throw CellOccupied();
     }
 
-    Character character = this->board[src_coordinates.row][src_coordinates.col];
-    this->board[dst_coordinates.row][dst_coordinates.col] = character;
+    std::shared_ptr<Character> new_charcter_ptr = this->board[src_coordinates.row][src_coordinates.col];
+    this->board[dst_coordinates.row][dst_coordinates.col] = new_charcter_ptr;
     this->board[src_coordinates.row][src_coordinates.col] = nullptr;
 }
 
@@ -99,8 +115,43 @@ void Game::reload(const GridPoint & coordinates)
     if (!isTheCellOccupied(coordinates)){
         throw CellEmpty();
     }
-    Character character = this->board[coordinates.row][coordinates.col];
-    character.reload();
+    std::shared_ptr<Character> new_charcter_ptr = this->board[coordinates.row][coordinates.col];
+    new_charcter_ptr->reload();
+}
+
+bool Game::isOver(Team* winningTeam=NULL) const 
+{
+    int powerlifters_counter=0,crossfitters_counter=0;
+    for (std::vector<std::shared_ptr<Character>> col : this->board){
+        for (std::shared_ptr<Character> character_ptr : col ){
+            if (character_ptr != nullptr){
+                if ((*character_ptr).getTeam() == POWERLIFTERS){
+                    powerlifters_counter++;
+                }
+                else {
+                    crossfitters_counter++;
+                }
+
+            }
+        }
+
+    }
+    if (crossfitters_counter == 0 && powerlifters_counter == 0){
+        return false;
+    }
+    if (crossfitters_counter == 0){
+        if (winningTeam !=nullptr){
+            *winningTeam = POWERLIFTERS;
+        }
+        return true;
+    }
+    if (powerlifters_counter == 0){
+        if (winningTeam !=nullptr){
+            *winningTeam = CROSSFITTERS;
+        }
+        return true;
+    }
+    return false;
 }
 
 
