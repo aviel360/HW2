@@ -15,7 +15,7 @@ class Character {
     public: 
     virtual ~Character();
     virtual void attack();
-    virtual void move()); 
+    virtual void move(); 
     virtual void reload();
     virtual Character* clone() const = 0;
 };
