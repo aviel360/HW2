@@ -12,11 +12,14 @@ namespace mtm{
         board[src.row, src.col] = nullptr;
     }
     
-    void Medic::attack(Board board, const GridPoint & dst){
+    void Medic::attack(Board board, const GridPoint& src, const GridPoint & dst){
+        if(src.distance(src, dst) > range){
+            throw OutOfRange();
+        }
         if(ammo = 0){
             throw OutOfAmmo();
         }
-        if(board[dst.row, dst.col] == nullptr || board[dst.row, dst.col] == this){
+        if(board[dst.row, dst.col] == nullptr || board[dst.row, dst.col] == board[src.row, src.col]){
             throw IllegalTarget();
         }
         if(board[dst.row, dst.col]->team != team ){

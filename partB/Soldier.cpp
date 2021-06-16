@@ -15,17 +15,20 @@ namespace mtm{
         board[src.row, src.col] = nullptr;
     }
     
-    void Soldier::attack(Board board, const GridPoint & dst){
+    void Soldier::attack(Board board, const GridPoint& src, const GridPoint & dst){
+        if(src.distance(src, dst) > range){
+            throw OutOfRange();
+        }
         if(ammo = 0){
             throw OutOfAmmo();
         }
         if(board[dst.row, dst.col] != nullptr && board[dst.row, dst.col]->team != team ){
             board[dst.row, dst.col]->health -= DAMAGE;
             if(board[dst.row, dst.col]->health <= 0){
-                ammo--;
                 board[dst.row, dst.col] = nullptr;
             }
         }
+        ammo--;
         aoeAttack(board, dst);
     }
 
@@ -42,7 +45,6 @@ namespace mtm{
                     continue;
                 }
                 if(board[current.row, current.col] != nullptr && board[current.row, current.col]->team != team ){
-                    ammo--;
                     board[current.row, current.col]->health -= AOE_DAMAGE;
                     if(board[current.row, current.col]->health <= 0){
                         board[current.row, current.col] = nullptr;

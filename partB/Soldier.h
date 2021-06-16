@@ -19,7 +19,7 @@ namespace mtm{
         Soldier& operator=(const Soldier& soldier) = default;
         ~Soldier() = default;
         void move(Board board, const GridPoint& src, const GridPoint& dst) override;
-        void attack(Board board, const GridPoint & dst) override;
+        void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
         void reload() override;
         void aoeAttack(Board board, const GridPoint & dst);
         Character* clone() const;

@@ -12,10 +12,10 @@ namespace mtm{
     class Character {
         protected:
         Team team;
-        int health;
-        int ammo;
-        int range; 
-        int power;
+        units_t health;
+        units_t ammo;
+        units_t range; 
+        units_t power;
 
         public: 
         Character(Team team, int health, int ammo, int range, int power);
@@ -23,7 +23,7 @@ namespace mtm{
         Character& operator=(const Character&) = default;
         ~Character() = default;
         virtual void move(Board board, const GridPoint& src, const GridPoint& dst);
-        virtual void attack(Board board, const GridPoint & dst_coordinates);
+        virtual void attack(Board board, const GridPoint& src, const GridPoint& dst);
         virtual void reload();
         virtual Character* clone() const = 0;
     };
