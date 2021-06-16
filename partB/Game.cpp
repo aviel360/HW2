@@ -26,7 +26,10 @@ Game::Game(int height, int width)
 //copy constructor
 Game::Game(const Game& other)
 {
-//clone
+    board_size[0]= other.board_size[0];
+    board_size[1]= other.board_size[0];
+
+    //....
 }
 
 //operator =
