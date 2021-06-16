@@ -29,13 +29,21 @@ Game::Game(const Game& other)
     board_size[0]= other.board_size[0];
     board_size[1]= other.board_size[0];
 
-    //....
+    board = std::vector<std::vector<std::shared_ptr<Character>>>
+                    (board_size[0], std::vector<std::shared_ptr<Character>>(board_size[1], nullptr));
+
+
+    for (int row =0; row < board_size[0]; row++ ){
+        for (int col =0; col < board_size[1]; col++ ){
+            board[row][col] = other.board[row][col]->clone();
+        }
+    }   
 }
 
 //operator =
 Game& Game::operator=(const Game& other)
 {
-//clone
+    return game(other);
 }
 
 void Game::addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character)
@@ -115,7 +123,10 @@ void Game::attack(const GridPoint & src_coordinates, const GridPoint & dst_coord
         throw IllegalTarget();
     }
 
-    attackNow(this->board,src_coordinates,dst_coordinates);
+    Character& character = *(board[src_coordinates.row][src_coordinates.col]);
+    Board board = this->board;
+
+    character.attack(board,dst_coordinates);
     clearCasualties(this->board);
 }
 
@@ -165,7 +176,7 @@ bool Game::isOver(Team* winningTeam=NULL) const
     }
     return false;
 }
-
+/*
 void clearCasualties(Board board){
     for (std::vector<std::shared_ptr<Character>> col : board){
         for (std::shared_ptr<Character> character_ptr : col ){
@@ -176,7 +187,7 @@ void clearCasualties(Board board){
         }
 
     }
-
+*/
 
 bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]){
     return (isInRange(coordinates.row, board_size[0]) && isInRange(coordinates.col,board_size[1]));
