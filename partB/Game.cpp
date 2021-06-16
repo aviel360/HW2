@@ -1,9 +1,9 @@
 #include "Game.h"
-#include "../Exceptions.h" 
+#include "Exceptions.h" 
 #include <typeinfo>
-#include "../Medic/Medic.h"
-#include "../Soldier/soldier.h"
-#include "../Sniper/Sniper.h"
+#include "Medic.h"
+#include "Soldier.h"
+#include "Sniper.h"
 
 
 
@@ -166,7 +166,7 @@ bool Game::isOver(Team* winningTeam=NULL) const
 void clearCasualties(Board board){
     for (std::vector<std::shared_ptr<Character>> col : board){
         for (std::shared_ptr<Character> character_ptr : col ){
-            if (*character_ptr.getHealth() <= 0){
+            if (character_ptr->getHealth() <= 0){
                 character_ptr = nullptr;
                 }
             }

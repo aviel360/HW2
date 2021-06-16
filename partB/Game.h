@@ -4,9 +4,9 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-#include "../Auxiliaries.h"
-#include "../Exceptions.h"
-#include "../Character/Character.h"
+#include "Auxiliaries.h"
+#include "Exceptions.h"
+#include "Character.h"
 
 #define DIMENSIONS 2
 
