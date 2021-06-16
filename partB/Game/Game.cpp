@@ -57,14 +57,20 @@ std::shared_ptr<Character> Game::makeCharacter(CharacterType type, Team team,
                      
     switch(type){
         case SOLDIER:
+        {
             std::shared_ptr<Character> new_charcter_ptr(new Soldier(team,health,ammo,range,power));
             return new_charcter_ptr;
+        }
         case MEDIC:
+        {
             std::shared_ptr<Character> new_charcter_ptr(new Medic(team,health,ammo,range,power));
             return new_charcter_ptr;
+        }
         case SNIPER:
+        {
             std::shared_ptr<Character> new_charcter_ptr(new Sniper(team,health,ammo,range,power));
             return new_charcter_ptr;
+        }    
     }
 }
 
@@ -167,11 +173,10 @@ void clearCasualties(Board board){
         }
 
     }
-}
 
 
 bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]){
-    return (isInRange(coordinates.row, board_size[0]) && isInRange(coordinates.col,board_size[1]))
+    return (isInRange(coordinates.row, board_size[0]) && isInRange(coordinates.col,board_size[1]));
 
 }
 
@@ -180,11 +185,11 @@ bool isInRange(int to_check, int max){
 }
 
 static bool isTheCellOccupied(const GridPoint& coordinates, Board board){
-    return  (board[coordinates.row][coordinates.col] != nullptr)
+    return  (board[coordinates.row][coordinates.col] != nullptr);
 }
 
 bool isTypeValid(CharacterType type){
-    return (type == SOLDIER || type == Sniper || type == MEDIC);
+    return (type == SOLDIER || type == SNIPER || type == MEDIC);
 }
 
 bool isTeamValid(Team team){
