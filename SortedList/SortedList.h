@@ -172,6 +172,9 @@ namespace mtm{
 
     template <class T>
     typename SortedList<T>::const_iterator& SortedList<T>::const_iterator::operator++(){
+        if(current == nullptr){
+            throw std::out_of_range ("Out of range!");
+        }
         current = current->getNext();
         return *this;
     }
@@ -188,6 +191,9 @@ namespace mtm{
 
     template <class T>
     typename SortedList<T>::const_iterator& SortedList<T>::const_iterator::operator++(int){
+        if(current == nullptr){
+            throw std::out_of_range ("Out of range!");
+        }
         const_iterator& temp = *this;
         current = current->getNext();
         return temp;

@@ -3,6 +3,7 @@
 #include <iostream>
 
 namespace mtm{
+<<<<<<< HEAD
     class Exceptions : std::exception {
 
         public:
@@ -16,4 +17,14 @@ namespace mtm{
         class IllegalTarget{};
     };
 }
+=======
+    class Exceptions : std::exception{
+        class IllegalArgument{};
+        class IllegalCell{};
+        class CellEmty{};
+
+    };
+}
+
+>>>>>>> Character
 #endif
