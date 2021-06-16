@@ -14,11 +14,15 @@ namespace mtm{
         static const int AMMO = 3;
         
     public:
-
+        Soldier(Team team, units_t health, units_t ammo, units_t range, units_t power);
+        Soldier(const Soldier&) = default;
+        Soldier& operator=(const Soldier& soldier) = default;
+        ~Soldier() = default;
         void move(Board board, const GridPoint& src, const GridPoint& dst) override;
         void attack(Board board, const GridPoint & dst) override;
         void reload() override;
         void aoeAttack(Board board, const GridPoint & dst);
+        Character* clone() const;
     };
 }
 

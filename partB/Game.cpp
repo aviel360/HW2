@@ -14,7 +14,7 @@ using namespace mtm;
 Game::Game(int height, int width) 
 {
     if (height <= 0 || width <=0){
-        throw Exceptions::IllegalArgument();
+        throw IllegalArgument();
     }
     board_size[0]= height;
     board_size[1]= width;
@@ -41,10 +41,10 @@ Game& Game::operator=(const Game& other)
 void Game::addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character)
 {
     if (!isTheCellInTheBoard(coordinates, this->board_size)){
-        throw Exceptions::IllegalCell();
+        throw IllegalCell();
     }
     if (isTheCellOccupied(coordinates)){
-        throw Exceptions::CellOccupied();
+        throw CellOccupied();
     }
     this->board[coordinates.row][coordinates.col] = character;
 }
@@ -55,7 +55,7 @@ std::shared_ptr<Character> Game::makeCharacter(CharacterType type, Team team,
     if (!isHealthValid(health) || !isAmmoValid(ammo) || !isRangeValid(range) ||
                 !isPowerValid(power) || isTypeValid(type) || isTeamValid(team))
                         {
-                            throw Exceptions::IllegalArgument();                
+                            throw IllegalArgument();                
                         }
                      
     switch(type){
@@ -80,16 +80,16 @@ std::shared_ptr<Character> Game::makeCharacter(CharacterType type, Team team,
 void Game::move(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
 {
      if (!isTheCellInTheBoard(src_coordinates, this->board_size) ||!isTheCellInTheBoard(dst_coordinates, this->board_size)){
-        throw Exceptions::IllegalCell();
+        throw IllegalCell();
     }
     if (!isTheCellOccupied(src_coordinates)){
-        throw Exceptions::CellEmpty();
+        throw CellEmpty();
     }
     if(!isValidCharcterMovement(src_coordinates, dst_coordinates)){
-        throw Exceptions::MoveTooFar();
+        throw MoveTooFar();
     }
     if(isTheCellOccupied(src_coordinates)){
-        throw Exceptions::CellOccupied();
+        throw CellOccupied();
     }
 
     std::shared_ptr<Character> new_charcter_ptr = this->board[src_coordinates.row][src_coordinates.col];
@@ -100,19 +100,19 @@ void Game::move(const GridPoint & src_coordinates, const GridPoint & dst_coordin
 void Game::attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
 {
     if (!isTheCellInTheBoard(src_coordinates, this->board_size) ||!isTheCellInTheBoard(dst_coordinates, this->board_size)){
-        throw Exceptions::IllegalCell();
+        throw IllegalCell();
     }
     if (!isTheCellOccupied(src_coordinates)){
-        throw Exceptions::CellEmpty();
+        throw CellEmpty();
     }
     if(!isAttackInRange(src_coordinates,dst_coordinates)){
-        throw Exceptions::OutOfRange();
+        throw OutOfRange();
     }
     if(!issStillEnoughAmmo(src_coordinates,dst_coordinates)){
-        throw Exceptions::OutOfAmmo();
+        throw OutOfAmmo();
     } 
     if(!isCharacterAttackValid(src_coordinates,dst_coordinates)){
-        throw Exceptions::IllegalTarget();
+        throw IllegalTarget();
     }
 
     attackNow(this->board,src_coordinates,dst_coordinates);
@@ -122,10 +122,10 @@ void Game::attack(const GridPoint & src_coordinates, const GridPoint & dst_coord
 void Game::reload(const GridPoint & coordinates)
 {
     if (!isTheCellInTheBoard(coordinates, this->board_size)){
-        throw Exceptions::IllegalCell();
+        throw IllegalCell();
     }
     if (!isTheCellOccupied(coordinates)){
-        throw Exceptions::CellEmpty();
+        throw CellEmpty();
     }
     std::shared_ptr<Character> new_charcter_ptr = this->board[coordinates.row][coordinates.col];
     new_charcter_ptr->reload();

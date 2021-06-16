@@ -4,7 +4,8 @@
 
 namespace mtm{
     class Medic : Character {
-
+    public:
+        virtual Character* clone();
     };
 }
 

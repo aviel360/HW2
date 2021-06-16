@@ -1,21 +1,29 @@
 #include "Soldier.h"
 
 namespace mtm{
+    Soldier::Soldier(Team team, units_t health, units_t ammo, units_t range, units_t power) : 
+                Character(team, health, ammo, range, power) {}
+
     void Soldier::move(Board board, const GridPoint& src, const GridPoint& dst){
         if(dst.distance(src, dst) > MAX_MOVEMENT){
-            throw MoveTooFar{};
+            throw MoveTooFar();
         }
-        // need to check if in the same row or col
+        if(src.col != dst.col || src.row != dst.row){
+            throw IllegalTarget();
+        }
         board[dst.row, dst.col] = board[src.row, src.col];
         board[src.row, src.col] = nullptr;
     }
     
     void Soldier::attack(Board board, const GridPoint & dst){
         if(ammo = 0){
-            throw OutOfAmmo{};
+            throw OutOfAmmo();
         }
         if(board[dst.row, dst.col] != nullptr && board[dst.row, dst.col]->team != team ){
             board[dst.row, dst.col]->health -= DAMAGE;
+            if(board[dst.row, dst.col]->health <= 0){
+                board[dst.row, dst.col] = nullptr;
+            }
         }
         aoeAttack(board, dst);
     }
@@ -41,4 +49,7 @@ namespace mtm{
             }
         }
     }
+    Character* Soldier::clone() const {
+        return new Soldier(*this);
+    } 
 }
