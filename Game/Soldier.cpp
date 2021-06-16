@@ -5,6 +5,7 @@ namespace mtm{
         if(dst.distance(src, dst) > MAX_MOVEMENT){
             throw MoveTooFar{};
         }
+        // need to check if in the same row or col
         board[dst.row, dst.col] = board[src.row, src.col];
         board[src.row, src.col] = nullptr;
     }

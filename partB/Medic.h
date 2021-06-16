@@ -1,12 +1,11 @@
-#include "Auxiliaries.h"
+#ifndef MEDIC_H
+#define MEDIC_H
 #include "Character.h"
-class Medic : public Character{
 
-    public:
-    Medic (Team team,
-                units_t health, units_t ammo , units_t range, units_t power);
+namespace mtm{
+    class Medic : Character {
 
+    };
+}
 
-    virtual Character* clone() const override;
-
-};
+#endif
