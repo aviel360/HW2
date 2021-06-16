@@ -22,6 +22,7 @@ namespace mtm{
         if(board[dst.row, dst.col] != nullptr && board[dst.row, dst.col]->team != team ){
             board[dst.row, dst.col]->health -= DAMAGE;
             if(board[dst.row, dst.col]->health <= 0){
+                ammo--;
                 board[dst.row, dst.col] = nullptr;
             }
         }
@@ -41,6 +42,7 @@ namespace mtm{
                     continue;
                 }
                 if(board[current.row, current.col] != nullptr && board[current.row, current.col]->team != team ){
+                    ammo--;
                     board[current.row, current.col]->health -= AOE_DAMAGE;
                     if(board[current.row, current.col]->health <= 0){
                         board[current.row, current.col] = nullptr;
