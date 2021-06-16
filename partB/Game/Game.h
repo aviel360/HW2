@@ -8,12 +8,15 @@
 #include "../Exceptions.h"
 #include "../Character/Character.h"
 
+#define DIMENSIONS 2
+
 namespace mtm{
 
 typedef std::vector<std::vector<std::shared_ptr<Character>>> Board;
 
 class Exception :std::exception{};
 class Game {
+    int board_size[DIMENSIONS];
     Board board;
 
     public:
@@ -36,7 +39,7 @@ class Game {
     static void clearCasualties(Board board);
     
 
-    static bool isTheCellInTheBoard(const GridPoint& coordinates);
+    static bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]);
     static bool isTheCellOccupied(const GridPoint& coordinates);
     static bool isTypeValid(CharacterType type);
     static bool isTeamValid(Team team);
@@ -48,12 +51,7 @@ class Game {
     static bool isAttackInRange(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
     static bool issStillEnoughAmmo(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
     static bool isCharacterAttackValid(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-
-
-
-
+    static bool isInRange(int to_check, int max);        
 };
-
-
 }
 #endif

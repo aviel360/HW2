@@ -4,6 +4,8 @@
 
 namespace mtm{
     class Exceptions : std::exception {
+
+        public:
         class IllegalArgument{};
         class IllegalCell{};
         class CellEmpty{};
