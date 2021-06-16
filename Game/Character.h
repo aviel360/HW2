@@ -2,10 +2,12 @@
 #define CHARACTER_H
 #include <iostream>
 #include "Auxiliaries.h"
+#include "Exceptions.h"
 
 namespace mtm{
     class Character {
         protected:
+        Team team;
         int health;
         int ammo;
         int range; 
@@ -13,8 +15,8 @@ namespace mtm{
 
         public: 
         virtual ~Character();
-        virtual void attack();
-        virtual void move(); 
+        virtual bool move(const int distance);
+        virtual void attack(Board board, const GridPoint & dst_coordinates);
         virtual void reload();
         virtual Character* clone() const = 0;
     };

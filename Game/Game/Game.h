@@ -4,19 +4,19 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-#include "../Character/Character.h"
+#include "../Character.h"
 
 
+namespace mtm{
 
-enum Team { POWERLIFTERS, CROSSFITTERS };
-enum CharacterType {SOLDIER, MEDIC, SNIPER};
 typedef int units_t;
 
 typedef std::vector<std::vector<std::shared_ptr<Character>>> Board;
 
 class Game {
     Board board;
-
+    
+    friend class Character;
     public:
     Game(int height, int width);
     ~Game();
@@ -31,4 +31,5 @@ class Game {
 
 };
 
+}
 #endif
