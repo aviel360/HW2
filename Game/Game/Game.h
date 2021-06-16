@@ -2,8 +2,6 @@
 #define GAME_H
 
 #include <iostream>
-#include <vector>
-#include <memory>
 #include "../Character.h"
 
 
@@ -11,11 +9,10 @@ namespace mtm{
 
 typedef int units_t;
 
-typedef std::vector<std::vector<std::shared_ptr<Character>>> Board;
 
 class Game {
     Board board;
-    
+
     friend class Character;
     public:
     Game(int height, int width);
