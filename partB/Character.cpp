@@ -25,8 +25,8 @@ namespace mtm{
     void Character::decreaseHealth(units_t damage){
         this->health-=damage;
     }
-    void Character::increaseHealth(units_t treatment){
-        this->health+=treatment;
+    void Character::increaseHealth(units_t heal){
+        this->health+=heal;
     }
 
 }

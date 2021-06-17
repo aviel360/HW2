@@ -26,19 +26,18 @@ namespace mtm{
         Character(const Character& character) = default;
         Character& operator=(const Character&) = default;
         virtual ~Character() = default;
-        virtual void move(Board board, const GridPoint& src, const GridPoint& dst) = 0;
-        virtual void attack(Board board, const GridPoint& src, const GridPoint& dst) = 0;
+        virtual void move(Board& board, const GridPoint& src, const GridPoint& dst) = 0;
+        virtual void attack(Board& board, const GridPoint& src, const GridPoint& dst) = 0;
         virtual void reload() = 0;
-        virtual char getSymbul() = 0;
+        virtual char getSymbol() = 0;
         std::shared_ptr<Character> clone() const;
         units_t getAmmo();
         units_t getRange();
         units_t getHealth();
         units_t getPower();
         units_t getTeam();
-
         void decreaseHealth(units_t damage);
-        void increaseHealth(units_t treatment);
+        void increaseHealth(units_t heal);
     };
 
    

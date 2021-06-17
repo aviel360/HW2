@@ -11,44 +11,37 @@
 #define DIMENSIONS 2
 
 namespace mtm{
+    class Game {
+        int board_size[DIMENSIONS];
+        Board board;
 
-class Exception :std::exception{};
-class Game {
-    int board_size[DIMENSIONS];
-    Board board;
+        public:
+        Game(int height, int width);
+        ~Game() = default;
+        Game(const Game& other) = default;
+        Game& operator=(const Game& other) = default;
+        void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
+        virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
+        void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
+        void reload(const GridPoint & coordinates);
+        static std::shared_ptr<Character> makeCharacter(CharacterType type, Team team,
+                    units_t health, units_t ammo, units_t range, units_t power);
+        
+        bool isOver(Team* winningTeam=NULL) const;
 
-    public:
-    Game(int height, int width);
-    ~Game() = default;
-    Game(const Game& other);
-    Game& operator=(const Game& other);
-    void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
-    virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
-    void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-    void reload(const GridPoint & coordinates);
-    static std::shared_ptr<Character> makeCharacter(CharacterType type, Team team,
-                units_t health, units_t ammo, units_t range, units_t power);
-    
-    bool isOver(Team* winningTeam=NULL) const;
+        friend std::ostream& operator<<(std::ostream& os, const Game& game);
 
-    friend std::ostream& operator<<(std::ostream& os, const Game& game);
+        class Exception {}; 
 
-    class Exception {}; 
-
-    static bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]);
-    static bool isTheCellOccupied(const GridPoint& coordinates, Board board);
-    static bool isTypeValid(CharacterType type);
-    static bool isTeamValid(Team team);
-    static bool isHealthValid(units_t health);
-    static bool isAmmoValid(units_t ammo);
-    static bool isRangeValid(units_t range);
-    static bool isPowerValid(units_t power);
-    static bool isValidCharcterMovement(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-    static bool isAttackInRange(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-    static bool issStillEnoughAmmo(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-    static bool isCharacterAttackValid(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-    static bool isInRange(int to_check, int max);        
-};
-
+        static bool isCellInBoard(const GridPoint& coordinates, int board_size[]);
+        static bool isCellOccupied(const GridPoint& coordinates, Board board);
+        static bool isTypeValid(CharacterType type);
+        static bool isTeamValid(Team team);
+        static bool isHealthValid(units_t health);
+        static bool isAmmoValid(units_t ammo);
+        static bool isRangeValid(units_t range);
+        static bool isPowerValid(units_t power);
+        static bool isInRange(int to_check, int max);        
+    };
 }
 #endif

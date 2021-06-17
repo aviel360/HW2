@@ -11,7 +11,7 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
     Medic::Medic(Team team, units_t health, units_t ammo, units_t range, units_t power) : 
                 Character(team, health, ammo, range, power) {}
 
-    void Medic::move(Board board, const GridPoint& src, const GridPoint& dst){
+    void Medic::move(Board& board, const GridPoint& src, const GridPoint& dst){
         if(dst.distance(src, dst) > MAX_MOVEMENT){
             throw MoveTooFar();
         }
@@ -19,11 +19,11 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
         board[src.row][src.col] = nullptr;
     }
     
-    void Medic::attack(Board board, const GridPoint& src, const GridPoint & dst){
+    void Medic::attack(Board& board, const GridPoint& src, const GridPoint & dst){
         if(src.distance(src, dst) > range){
             throw OutOfRange();
         }
-        if(ammo = 0){
+        if(ammo == 0){
             throw OutOfAmmo();
         }
         if(board[dst.row][ dst.col] == nullptr || board[dst.row][ dst.col] == board[src.row][ src.col]){
@@ -32,9 +32,6 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
         if(board[dst.row][dst.col]->getTeam() != team ){
             ammo--;
             board[dst.row][dst.col]->decreaseHealth(power);
-            if(board[dst.row][ dst.col]->getHealth() <= 0){
-                board[dst.row][ dst.col] = nullptr;
-            }
         }
         if(board[dst.row][ dst.col]->getTeam() == team ){
             ammo--;
@@ -46,7 +43,7 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
         ammo += AMMO;
     }
 
-    char Medic::getSymbul() {
+    char Medic::getSymbol() {
         if (this->team == POWERLIFTERS){
             return 'M';
         }

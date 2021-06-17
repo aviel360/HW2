@@ -14,12 +14,10 @@ namespace mtm{
         Sniper(const Sniper&) = default;
         Sniper& operator=(const Sniper& Sniper) = default;
         ~Sniper() = default;
-        void move(Board board, const GridPoint& src, const GridPoint& dst) override;
-        void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
+        void move(Board& board, const GridPoint& src, const GridPoint& dst) override;
+        void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         void reload() override;
-        virtual char getSymbul() override ;
-        void aoeAttack(Board board, const GridPoint & dst);
-
+        virtual char getSymbol() override ;
         static Team getTeam();
         static units_t getHealth();
     };

@@ -22,7 +22,7 @@ namespace mtm{
                         (height, std::vector<std::shared_ptr<Character>>(width, nullptr));
     }
 
-    //copy constructor
+   /* //copy constructor
     Game::Game(const Game& other)
     {
         board_size[0]= other.board_size[0];
@@ -45,11 +45,11 @@ namespace mtm{
         if (this == &other) {
 		return *this;
 	}
-        Game game(other);
+        Game game = new Game(other);
         return game;
-    }
+    }*/
 
-    std::ostream& operator<<(std::ostream& os, const Game& game)
+    /*std::ostream& operator<<(std::ostream& os, const Game& game)
     {
         int row = game.board_size[0], col = game.board_size[1];
         std::vector<std::vector<char>> printed_board =  std::vector<std::vector<char>>(row, std::vector<char>(col, ' '));
@@ -64,18 +64,37 @@ namespace mtm{
                     printed_board[row][col] = ' ';
                     continue;
                 }
-                printed_board[row][col] = current_character->getSymbul(); 
+                printed_board[row][col] = current_character->getSymbol(); 
             }
         }
         return printGameBoard(std::cout,begin,end,col);
+    }*/
+    std::ostream& operator<<(std::ostream& os, const Game& game){
+        int row = game.board_size[0], col = game.board_size[1];
+        std::string delimiter = std::string(2 * col + 1, '*');
+        char temp = ' ';
+        os << delimiter << std::endl;
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < col; j++){
+                std::shared_ptr<Character> character = game.board[i][j];
+                if(character != nullptr){
+                    temp = character->getSymbol();
+                }
+                os << "|" << temp;
+                temp = ' ';
+            }
+            os << "|" << std::endl;
+        }
+        os << delimiter;
+        return os;
     }
 
     void Game::addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character)
     {
-        if (!isTheCellInTheBoard(coordinates, this->board_size)){
+        if (!isCellInBoard(coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (isTheCellOccupied(coordinates,this->board)){
+        if (isCellOccupied(coordinates,this->board)){
             throw CellOccupied();
         }
         this->board[coordinates.row][coordinates.col] = character;
@@ -85,24 +104,20 @@ namespace mtm{
                     units_t health, units_t ammo , units_t range, units_t power)
     {
         if (!isHealthValid(health) || !isAmmoValid(ammo) || !isRangeValid(range) ||
-                    !isPowerValid(power) || isTypeValid(type) || isTeamValid(team))
-                            {
-                                throw IllegalArgument();                
-                            }
+                    !isPowerValid(power) || !isTypeValid(type) || !isTeamValid(team)){
+            throw IllegalArgument();                
+        }
                         
         switch(type){
-            case SOLDIER:
-            {
+            case SOLDIER:{
                 std::shared_ptr<Character> new_charcter_ptr(new Soldier(team,health,ammo,range,power));
                 return new_charcter_ptr;
             }
-            case MEDIC:
-            {
+            case MEDIC:{
                 std::shared_ptr<Character> new_charcter_ptr(new Medic(team,health,ammo,range,power));
                 return new_charcter_ptr;
             }
-            case SNIPER:
-            {
+            case SNIPER:{
                 std::shared_ptr<Character> new_charcter_ptr(new Sniper(team,health,ammo,range,power));
                 return new_charcter_ptr;
             }
@@ -113,41 +128,36 @@ namespace mtm{
 
     void Game::move(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
     {
-        if (!isTheCellInTheBoard(src_coordinates, this->board_size) ||!isTheCellInTheBoard(dst_coordinates, this->board_size)){
+        if (!isCellInBoard(src_coordinates, this->board_size) ||!isCellInBoard(dst_coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (!isTheCellOccupied(src_coordinates, this->board)){
+        if (!isCellOccupied(src_coordinates, this->board)){
             throw CellEmpty();
         }
-        if(isTheCellOccupied(src_coordinates,this->board)){
+        if(isCellOccupied(dst_coordinates,this->board)){
             throw CellOccupied();
         }
-
-        std::shared_ptr<Character> new_charcter_ptr = this->board[src_coordinates.row][src_coordinates.col];
-        this->board[dst_coordinates.row][dst_coordinates.col] = new_charcter_ptr;
-        this->board[src_coordinates.row][src_coordinates.col] = nullptr;
+        board[src_coordinates.row][src_coordinates.col]->move(board, src_coordinates, dst_coordinates);
+        
     }
 
     void Game::attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
     {
-        if (!isTheCellInTheBoard(src_coordinates, this->board_size) ||!isTheCellInTheBoard(dst_coordinates, this->board_size)){
+        if (!isCellInBoard(src_coordinates, this->board_size) ||!isCellInBoard(dst_coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (!isTheCellOccupied(src_coordinates,this->board)){
+        if (!isCellOccupied(src_coordinates,board)){
             throw CellEmpty();
         }
-        Character& character = *(board[src_coordinates.row][src_coordinates.col]);
-        Board board = this->board;
-
-        character.attack(board,src_coordinates, dst_coordinates);
+        board[src_coordinates.row][src_coordinates.col]->attack(board,src_coordinates, dst_coordinates);
     }
 
     void Game::reload(const GridPoint & coordinates)
     {
-        if (!isTheCellInTheBoard(coordinates, this->board_size)){
+        if (!isCellInBoard(coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (!isTheCellOccupied(coordinates,this->board)){
+        if (!isCellOccupied(coordinates,this->board)){
             throw CellEmpty();
         }
         std::shared_ptr<Character> new_charcter_ptr = this->board[coordinates.row][coordinates.col];
@@ -193,12 +203,12 @@ namespace mtm{
         return (to_check >= 0 && to_check <= max);
     }
 
-    bool Game::isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]){
+    bool Game::isCellInBoard(const GridPoint& coordinates, int board_size[]){
         return (isInRange(coordinates.row, board_size[0]) && isInRange(coordinates.col,board_size[1]));
 
     }
  
-    bool Game::isTheCellOccupied(const GridPoint& coordinates, Board board){
+    bool Game::isCellOccupied(const GridPoint& coordinates, Board board){
         return  (board[coordinates.row][coordinates.col] != nullptr);
     }
 
