@@ -23,7 +23,7 @@ namespace mtm{
                                                     || board[dst.row, dst.col]->team == team){
             throw IllegalTarget();
         }
-        int temp = power;
+        units_t temp = power;
         if(headshot % 3 == 0){
             power = power * 2;
         }
@@ -39,7 +39,7 @@ namespace mtm{
     void Sniper::reload(){
         ammo += AMMO;
     }
-    Character* Sniper::clone() const {
-        return new Sniper(*this);
+    std::shared_ptr<Character> Sniper::cloneAux() const {
+        return std::shared_ptr<Sniper>(new Sniper(*this));
     } 
 }

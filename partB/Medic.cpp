@@ -38,7 +38,7 @@ namespace mtm{
     void Medic::reload(){
         ammo += AMMO;
     }
-    Character* Medic::clone() const {
-        return new Medic(*this);
+    std::shared_ptr<Character> Medic::cloneAux() const {
+        return std::shared_ptr<Medic>(new Medic(*this));
     } 
 }

@@ -3,8 +3,9 @@
 #include "Character.h"
 
 namespace mtm{
-    class Sniper : Character {
-        int HEADSHOT = 0;
+    class Sniper : public Character {
+        virtual std::shared_ptr<Character> cloneAux() const override;
+        int headshot;
         static const int MAX_MOVEMENT = 4;
         static const int AMMO = 2;
         
@@ -17,7 +18,6 @@ namespace mtm{
         void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
         void reload() override;
         void aoeAttack(Board board, const GridPoint & dst);
-        Character* clone() const;    
     };
 }
 

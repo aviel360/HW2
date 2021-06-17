@@ -53,7 +53,7 @@ namespace mtm{
             }
         }
     }
-    std::shared_ptr<Character> Soldier::clone() const {
-        return std::shared_ptr<Soldier>(*this);
+    std::shared_ptr<Character> Soldier::cloneAux() const {
+        return std::shared_ptr<Soldier>(new Soldier(*this));
     } 
 }

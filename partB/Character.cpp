@@ -18,4 +18,8 @@ namespace mtm{
     units_t Character::getTeam(){
         return team;
     }
+    std::shared_ptr<Character> Character::clone() const{
+        return cloneAux();
+    }
+
 }

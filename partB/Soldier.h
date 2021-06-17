@@ -5,7 +5,7 @@
 
 namespace mtm{
     class Soldier : public Character {
-
+        virtual std::shared_ptr<Character> cloneAux() const override;
         const int HEAD = ceil(range / 3 );
         const int MAX_ATTACK_RANGE = HEAD*2 + 1;
         const int AOE_DAMAGE = power / 2;
@@ -18,11 +18,10 @@ namespace mtm{
         Soldier(const Soldier&) = default;
         Soldier& operator=(const Soldier& soldier) = default;
         ~Soldier() = default;
-        void move(Board board, const GridPoint& src, const GridPoint& dst) override;
-        void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
-        void reload() override;
+        virtual void move(Board board, const GridPoint& src, const GridPoint& dst) override;
+        virtual void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
+        virtual void reload() override;
         void aoeAttack(Board board, const GridPoint & dst);
-        std::shared_ptr<Character> clone() const;
     };
 }
 
