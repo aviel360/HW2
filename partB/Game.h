@@ -24,6 +24,7 @@ class Game {
     ~Game();
     Game(const Game& other);
     Game& operator=(const Game& other);
+    void operator<<(const Game& game);
     void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
     virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
     void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);

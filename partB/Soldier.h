@@ -22,7 +22,7 @@ namespace mtm{
         void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
         void reload() override;
         void aoeAttack(Board board, const GridPoint & dst);
-        Character* clone() const;
+        std::shared_ptr<Character> clone() const;
     };
 }
 

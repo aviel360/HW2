@@ -43,7 +43,26 @@ Game::Game(const Game& other)
 //operator =
 Game& Game::operator=(const Game& other)
 {
-    return game(other);
+    Game game(other);
+    return game;
+}
+
+void Game::operator<<(const Game& game)
+{
+    int row = game.board_size[0], col = game.board_size[1];
+    std::vector<std::vector<char>> printed_board =  std::vector<std::vector<char>>(row, std::vector<char>(col, ' '));
+
+    for (int row =0; row < board_size[0]; row++ ){
+        for (int col =0; col < board_size[1]; col++ ){
+            std::shared_ptr<Character> current_character = game.board[row][col];
+            if (current_character == nullptr){
+                printed_board[row][col] = ' ';
+                continue;
+            }
+            printed_board[row][col] = current_character->getSymbul(); 
+        }
+    }
+    printGameBoard(stdout,const printed_board.begin(),printed_board.end(),col);
 }
 
 void Game::addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character)
