@@ -1,7 +1,13 @@
 #include "Medic.h"
+#include "Character.h"
 #include <memory>
+#include <iostream>
+
+
 
 namespace mtm{
+std::shared_ptr<Character> shared_nullptr(nullptr);
+
     Medic::Medic(Team team, units_t health, units_t ammo, units_t range, units_t power) : 
                 Character(team, health, ammo, range, power) {}
 
@@ -9,8 +15,8 @@ namespace mtm{
         if(dst.distance(src, dst) > MAX_MOVEMENT){
             throw MoveTooFar();
         }
-        board[dst.row, dst.col] = board[src.row, src.col];
-        board[src.row, src.col] = nullptr;
+        board[dst.row][dst.col] = board[src.row][src.col];
+        board[src.row][src.col] = nullptr;
     }
     
     void Medic::attack(Board board, const GridPoint& src, const GridPoint & dst){
@@ -20,19 +26,19 @@ namespace mtm{
         if(ammo = 0){
             throw OutOfAmmo();
         }
-        if(board[dst.row, dst.col] == nullptr || board[dst.row, dst.col] == board[src.row, src.col]){
+        if(board[dst.row][ dst.col] == nullptr || board[dst.row][ dst.col] == board[src.row][ src.col]){
             throw IllegalTarget();
         }
-        if(board[dst.row, dst.col]->team != team ){
+        if(board[dst.row][dst.col]->getTeam() != team ){
             ammo--;
-            board[dst.row, dst.col]->health -= power;
-            if(board[dst.row, dst.col]->health <= 0){
-                board[dst.row, dst.col] = nullptr;
+            board[dst.row][dst.col]->decreaseHealth(power);
+            if(board[dst.row][ dst.col]->getHealth() <= 0){
+                board[dst.row][ dst.col] = nullptr;
             }
         }
-        if(board[dst.row, dst.col]->team != team ){
+        if(board[dst.row][ dst.col]->getTeam() == team ){
             ammo--;
-            board[dst.row, dst.col]->health += power;
+            board[dst.row][ dst.col]->increaseHealth(power);
         }
     }
 
@@ -48,5 +54,6 @@ namespace mtm{
     }
     std::shared_ptr<Character> Medic::cloneAux() const {
         return std::shared_ptr<Medic>(new Medic(*this));
-    } 
+    }
+
 }

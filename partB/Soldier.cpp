@@ -12,8 +12,8 @@ namespace mtm{
         if(src.col != dst.col || src.row != dst.row){
             throw IllegalTarget();
         }
-        board[dst.row, dst.col] = board[src.row, src.col];
-        board[src.row, src.col] = nullptr;
+        board[dst.row][dst.col] = board[src.row][src.col];
+        board[src.row][src.col] = nullptr;
     }
     
     void Soldier::attack(Board board, const GridPoint& src, const GridPoint & dst){
@@ -23,10 +23,10 @@ namespace mtm{
         if(ammo = 0){
             throw OutOfAmmo();
         }
-        if(board[dst.row, dst.col] != nullptr && board[dst.row, dst.col]->team != team ){
-            board[dst.row, dst.col]->health -= DAMAGE;
-            if(board[dst.row, dst.col]->health <= 0){
-                board[dst.row, dst.col] = nullptr;
+        if(board[dst.row][dst.col] != nullptr && board[dst.row][dst.col]->getTeam() != team ){
+            board[dst.row][dst.col]->decreaseHealth(DAMAGE);
+            if(board[dst.row][dst.col]->getHealth() <= 0){
+                board[dst.row][dst.col] = nullptr;
             }
         }
         ammo--;
@@ -52,10 +52,10 @@ namespace mtm{
                 if(dst.distance(dst, current) > HEAD){
                     continue;
                 }
-                if(board[current.row, current.col] != nullptr && board[current.row, current.col]->team != team ){
-                    board[current.row, current.col]->health -= AOE_DAMAGE;
-                    if(board[current.row, current.col]->health <= 0){
-                        board[current.row, current.col] = nullptr;
+                if(board[current.row][current.col] != nullptr && board[current.row][current.col]->getTeam() != team ){
+                    board[current.row][current.col]->decreaseHealth(AOE_DAMAGE);
+                    if(board[current.row][current.col]->getHealth() <= 0){
+                        board[current.row][current.col] = nullptr;
                     }
                 }
             }

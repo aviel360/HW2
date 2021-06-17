@@ -9,8 +9,8 @@ namespace mtm{
         if(dst.distance(src, dst) > MAX_MOVEMENT){
             throw MoveTooFar();
         }
-        board[dst.row, dst.col] = board[src.row, src.col];
-        board[src.row, src.col] = nullptr;
+        board[dst.row][dst.col] = board[src.row][ src.col];
+        board[src.row][src.col] = nullptr;
     }
     
     void Sniper::attack(Board board, const GridPoint& src, const GridPoint & dst){
@@ -20,17 +20,17 @@ namespace mtm{
         if(ammo = 0){
             throw OutOfAmmo();
         }
-        if(board[dst.row, dst.col] == nullptr || src.distance(src, dst) < ceil(range / 2)
-                                                    || board[dst.row, dst.col]->team == team){
+        if(board[dst.row][dst.col] == nullptr || src.distance(src, dst) < ceil(range / 2)
+                                                    || board[dst.row][dst.col]->getTeam() == team){
             throw IllegalTarget();
         }
         units_t temp = power;
         if(headshot % 3 == 0){
             power = power * 2;
         }
-        board[dst.row, dst.col]->health -= power;
-        if(board[dst.row, dst.col]->health <= 0){
-                board[dst.row, dst.col] = nullptr;
+        board[dst.row][dst.col]->decreaseHealth(power);
+        if(board[dst.row][dst.col]->getHealth() <= 0){
+                board[dst.row][dst.col] = nullptr;
         }
         headshot++;
         ammo--;

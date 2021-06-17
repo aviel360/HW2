@@ -36,6 +36,9 @@ namespace mtm{
         units_t getHealth();
         units_t getPower();
         units_t getTeam();
+
+        void decreaseHealth(units_t damage);
+        void increaseHealth(units_t treatment);
     };
 
    

@@ -36,10 +36,6 @@ class Game {
     class Exception {}; 
 
     private:
-    static void attackNow(Board board, const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
-    static void clearCasualties(Board board);
-    
-
     static bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]);
     static bool isTheCellOccupied(const GridPoint& coordinates);
     static bool isTypeValid(CharacterType type);
@@ -53,11 +49,7 @@ class Game {
     static bool issStillEnoughAmmo(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
     static bool isCharacterAttackValid(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
     static bool isInRange(int to_check, int max);        
-
-
 };
-
-    
 
 }
 #endif

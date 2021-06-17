@@ -147,7 +147,6 @@ namespace mtm{
         Board board = this->board;
 
         character.attack(board,src_coordinates, dst_coordinates);
-        clearCasualties(this->board);
     }
 
     void Game::reload(const GridPoint & coordinates)
@@ -196,19 +195,7 @@ namespace mtm{
         }
         return false;
     }
-    /*
-    void clearCasualties(Board board){
-        for (std::vector<std::shared_ptr<Character>> col : board){
-            for (std::shared_ptr<Character> character_ptr : col ){
-                if (character_ptr->getHealth() <= 0){
-                    character_ptr = nullptr;
-                    }
-                }
-            }
-
-        }
-    */
-
+  
    bool isInRange(int to_check, int max){
         return (to_check >= 0 && to_check <= max);
     }

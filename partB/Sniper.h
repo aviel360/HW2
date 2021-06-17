@@ -19,6 +19,9 @@ namespace mtm{
         void reload() override;
         virtual char getSymbul() override ;
         void aoeAttack(Board board, const GridPoint & dst);
+
+        static Team getTeam();
+        static units_t getHealth();
     };
 }
 

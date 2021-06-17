@@ -22,4 +22,11 @@ namespace mtm{
         return cloneAux();
     }
 
+    void Character::decreaseHealth(units_t damage){
+        this->health-=damage;
+    }
+    void Character::increaseHealth(units_t treatment){
+        this->health+=treatment;
+    }
+
 }
