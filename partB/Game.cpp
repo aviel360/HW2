@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Exceptions.h" 
 #include <iostream>
+#include <assert.h>
 #include <memory>
 #include "Medic.h"
 #include "Soldier.h"
@@ -41,6 +42,9 @@ namespace mtm{
     //operator =
     Game& Game::operator=(const Game& other)
     {
+        if (this == &other) {
+		return *this;
+	}
         Game game(other);
         return game;
     }
@@ -71,7 +75,7 @@ namespace mtm{
         if (!isTheCellInTheBoard(coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (isTheCellOccupied(coordinates)){
+        if (isTheCellOccupied(coordinates,this->board)){
             throw CellOccupied();
         }
         this->board[coordinates.row][coordinates.col] = character;
@@ -101,22 +105,21 @@ namespace mtm{
             {
                 std::shared_ptr<Character> new_charcter_ptr(new Sniper(team,health,ammo,range,power));
                 return new_charcter_ptr;
-            }    
+            }
         }
+        return nullptr;
     }
+    
 
     void Game::move(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
     {
         if (!isTheCellInTheBoard(src_coordinates, this->board_size) ||!isTheCellInTheBoard(dst_coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (!isTheCellOccupied(src_coordinates)){
+        if (!isTheCellOccupied(src_coordinates, this->board)){
             throw CellEmpty();
         }
-        if(!isValidCharcterMovement(src_coordinates, dst_coordinates)){
-            throw MoveTooFar();
-        }
-        if(isTheCellOccupied(src_coordinates)){
+        if(isTheCellOccupied(src_coordinates,this->board)){
             throw CellOccupied();
         }
 
@@ -130,19 +133,9 @@ namespace mtm{
         if (!isTheCellInTheBoard(src_coordinates, this->board_size) ||!isTheCellInTheBoard(dst_coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (!isTheCellOccupied(src_coordinates)){
+        if (!isTheCellOccupied(src_coordinates,this->board)){
             throw CellEmpty();
         }
-        if(!isAttackInRange(src_coordinates,dst_coordinates)){
-            throw OutOfRange();
-        }
-        if(!issStillEnoughAmmo(src_coordinates,dst_coordinates)){
-            throw OutOfAmmo();
-        } 
-        if(!isCharacterAttackValid(src_coordinates,dst_coordinates)){
-            throw IllegalTarget();
-        }
-
         Character& character = *(board[src_coordinates.row][src_coordinates.col]);
         Board board = this->board;
 
@@ -154,7 +147,7 @@ namespace mtm{
         if (!isTheCellInTheBoard(coordinates, this->board_size)){
             throw IllegalCell();
         }
-        if (!isTheCellOccupied(coordinates)){
+        if (!isTheCellOccupied(coordinates,this->board)){
             throw CellEmpty();
         }
         std::shared_ptr<Character> new_charcter_ptr = this->board[coordinates.row][coordinates.col];
@@ -196,40 +189,40 @@ namespace mtm{
         return false;
     }
   
-   bool isInRange(int to_check, int max){
+   bool Game::isInRange(int to_check, int max){
         return (to_check >= 0 && to_check <= max);
     }
 
-    bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]){
+    bool Game::isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]){
         return (isInRange(coordinates.row, board_size[0]) && isInRange(coordinates.col,board_size[1]));
 
     }
  
-    static bool isTheCellOccupied(const GridPoint& coordinates, Board board){
+    bool Game::isTheCellOccupied(const GridPoint& coordinates, Board board){
         return  (board[coordinates.row][coordinates.col] != nullptr);
     }
 
-    bool isTypeValid(CharacterType type){
+    bool Game::isTypeValid(CharacterType type){
         return (type == SOLDIER || type == SNIPER || type == MEDIC);
     }
 
-    bool isTeamValid(Team team){
+    bool Game::isTeamValid(Team team){
         return (team == CROSSFITTERS || team == POWERLIFTERS);
     }
 
-    bool isHealthValid(units_t health){
+    bool Game::isHealthValid(units_t health){
         return (health > 0 );
     }
 
-    bool isAmmoValid(units_t ammo){
+    bool Game::isAmmoValid(units_t ammo){
         return (ammo >= 0) ;
     }
 
-    bool isRangeValid(units_t range){
+    bool Game::isRangeValid(units_t range){
         return (range > 0) ;
     }
 
-    bool isPowerValid(units_t power){
+    bool Game::isPowerValid(units_t power){
         return (power >= 0) ;
     }
 

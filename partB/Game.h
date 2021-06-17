@@ -19,7 +19,7 @@ class Game {
 
     public:
     Game(int height, int width);
-    ~Game();
+    ~Game() = default;
     Game(const Game& other);
     Game& operator=(const Game& other);
     void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
@@ -35,9 +35,8 @@ class Game {
 
     class Exception {}; 
 
-    private:
     static bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]);
-    static bool isTheCellOccupied(const GridPoint& coordinates);
+    static bool isTheCellOccupied(const GridPoint& coordinates, Board board);
     static bool isTypeValid(CharacterType type);
     static bool isTeamValid(Team team);
     static bool isHealthValid(units_t health);
