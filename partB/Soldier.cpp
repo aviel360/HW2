@@ -24,7 +24,7 @@ namespace mtm{
             throw IllegalTarget();
         }
         if(board[dst.row][dst.col] != nullptr && board[dst.row][dst.col]->getTeam() != team ){
-            board[dst.row][dst.col]->decreaseHealth(DAMAGE);
+            board[dst.row][dst.col]->decreaseHealth(power);
         }
         ammo--;
         aoeAttack(board, dst);
@@ -46,7 +46,7 @@ namespace mtm{
         for(int i = 0; i < MAX_ATTACK_RANGE; i++){
             for(int j = 0; j < MAX_ATTACK_RANGE; j++){
                 GridPoint current(head.row + i, head.col + j);
-                if(dst.distance(dst, current) > HEAD){
+                if(dst.distance(dst, current) > HEAD || i == dst.row + HEAD && j == dst.col + HEAD){
                     continue;
                 }
                 if(board[current.row][current.col] != nullptr && board[current.row][current.col]->getTeam() != team ){

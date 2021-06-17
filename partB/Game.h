@@ -31,8 +31,6 @@ namespace mtm{
 
         friend std::ostream& operator<<(std::ostream& os, const Game& game);
 
-        class Exception {}; 
-
         static bool isCellInBoard(const GridPoint& coordinates, int board_size[]);
         static bool isCellOccupied(const GridPoint& coordinates, Board board);
         static bool isTypeValid(CharacterType type);

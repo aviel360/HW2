@@ -1,47 +1,53 @@
-#ifndef EXCEPTIONS_H
-#define EXCEPTIONS_H
-#include <iostream>
+#ifndef EXCEPTION_H
+#define EXCEPTION_H
+#include <ostream>
 
 namespace mtm{
 
-
-    class Exceptions: std::exception{
-        
-        public:
-        const char* error_message; 
-
-        virtual const char* what() const noexcept override{
-            return this->error_message;
-            } 
+    class Exception: std::exception{
+    public:    
+        virtual const char* what() const noexcept = 0;
     };
 
-    class IllegalArgument : public Exceptions{
-        const char* error_message = "A game related error has occurred: IllegalArgument";
-    };
-    class IllegalCell : public Exceptions{
-        const char* error_message = "A game related error has occurred: IllegalCell";
-    };
-    class CellEmpty :public Exceptions{
-        const char* error_message = "A game related error has occurred: CellEmpty";
-    };
-    class MoveTooFar : public Exceptions{
-        const char* error_message = "A game related error has occurred:  MoveTooFar";
-    };
-    class CellOccupied : public Exceptions{
-        const char* error_message = "A game related error has occurred: CellOccupied";
-    };
-    class OutOfRange :public Exceptions{
-        const char* error_message = "A game related error has occurred: OutOfRange";
-
-    };
-    class OutOfAmmo : public Exceptions{
-        const char* error_message = "A game related error has occurred: OutOfAmmo";
-    };
-    class IllegalTarget :public Exceptions{
-        const char* error_message = "A game related error has occurred:  IllegalTarget";
+    class IllegalArgument : public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
     };
 
-    
+    class IllegalCell : public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
+
+    class CellEmpty :public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
+
+    class MoveTooFar : public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
+
+    class CellOccupied : public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
+
+    class OutOfRange :public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
+
+    class OutOfAmmo : public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
+
+    class IllegalTarget :public Exception{
+    public:    
+        virtual const char* what() const noexcept override;
+    };
     
 }
 
