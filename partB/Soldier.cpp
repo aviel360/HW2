@@ -1,4 +1,5 @@
 #include "Soldier.h"
+#include <memory>
 
 namespace mtm{
     Soldier::Soldier(Team team, units_t health, units_t ammo, units_t range, units_t power) : 
@@ -34,6 +35,13 @@ namespace mtm{
 
     void Soldier::reload(){
         ammo += AMMO;
+    }
+
+    char Soldier::getSymbul() {
+        if (this->team == POWERLIFTERS){
+            return 'S';
+        }
+        return 's';
     }
 
     void Soldier::aoeAttack(Board board, const GridPoint& dst){

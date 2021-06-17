@@ -3,7 +3,7 @@
 #include <cassert>
 
 #include "Exceptions.h"
-#include "Game/Game.h"
+#include "Game.h"
 
 using namespace mtm;
 

@@ -1,4 +1,5 @@
 #include "Sniper.h"
+#include <memory>
 
 namespace mtm{
     Sniper::Sniper(Team team, units_t health, units_t ammo, units_t range, units_t power) : 
@@ -38,6 +39,13 @@ namespace mtm{
 
     void Sniper::reload(){
         ammo += AMMO;
+    }
+
+    char Sniper::getSymbul() {
+        if (this->team == POWERLIFTERS){
+            return 'N';
+        }
+        return 'n';
     }
     std::shared_ptr<Character> Sniper::cloneAux() const {
         return std::shared_ptr<Sniper>(new Sniper(*this));

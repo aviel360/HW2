@@ -1,10 +1,10 @@
 #include "Game.h"
 #include "Exceptions.h" 
-#include <typeinfo>
+#include <iostream>
+#include <memory>
 #include "Medic.h"
 #include "Soldier.h"
 #include "Sniper.h"
-
 
 
 
@@ -45,10 +45,13 @@ namespace mtm{
         return game;
     }
 
-    void Game::operator<<(const Game& game)
+    std::ostream& Game::operator<<(const Game& game)
     {
         int row = game.board_size[0], col = game.board_size[1];
         std::vector<std::vector<char>> printed_board =  std::vector<std::vector<char>>(row, std::vector<char>(col, ' '));
+
+        const char* begin= &printed_board[0][0];
+        const char* end= &(printed_board[row][col])+1;
 
         for (int row =0; row < board_size[0]; row++ ){
             for (int col =0; col < board_size[1]; col++ ){
@@ -60,7 +63,7 @@ namespace mtm{
                 printed_board[row][col] = current_character->getSymbul(); 
             }
         }
-        printGameBoard(stdout,const printed_board.begin(),printed_board.end(),col);
+        return printGameBoard(std::cout,begin,end,col);
     }
 
     void Game::addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character)
@@ -143,7 +146,7 @@ namespace mtm{
         Character& character = *(board[src_coordinates.row][src_coordinates.col]);
         Board board = this->board;
 
-        character.attack(board,dst_coordinates);
+        character.attack(board,src_coordinates, dst_coordinates);
         clearCasualties(this->board);
     }
 
@@ -159,7 +162,7 @@ namespace mtm{
         new_charcter_ptr->reload();
     }
 
-    bool Game::isOver(Team* winningTeam=NULL) const 
+    bool Game::isOver(Team* winningTeam) const 
     {
         int powerlifters_counter=0,crossfitters_counter=0;
         for (std::vector<std::shared_ptr<Character>> col : this->board){
@@ -206,15 +209,15 @@ namespace mtm{
         }
     */
 
+   bool isInRange(int to_check, int max){
+        return (to_check >= 0 && to_check <= max);
+    }
+
     bool isTheCellInTheBoard(const GridPoint& coordinates, int board_size[]){
         return (isInRange(coordinates.row, board_size[0]) && isInRange(coordinates.col,board_size[1]));
 
     }
-
-    bool isInRange(int to_check, int max){
-        return (to_check >= 0 && to_check <= max);
-    }
-
+ 
     static bool isTheCellOccupied(const GridPoint& coordinates, Board board){
         return  (board[coordinates.row][coordinates.col] != nullptr);
     }

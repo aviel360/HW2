@@ -12,8 +12,6 @@
 
 namespace mtm{
 
-typedef std::vector<std::vector<std::shared_ptr<Character>>> Board;
-
 class Exception :std::exception{};
 class Game {
     int board_size[DIMENSIONS];
@@ -24,7 +22,6 @@ class Game {
     ~Game();
     Game(const Game& other);
     Game& operator=(const Game& other);
-    void operator<<(const Game& game);
     void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
     virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
     void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
@@ -33,6 +30,9 @@ class Game {
                 units_t health, units_t ammo, units_t range, units_t power);
     
     bool isOver(Team* winningTeam=NULL) const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Game& game);
+
     class Exception {}; 
 
     private:
@@ -53,6 +53,11 @@ class Game {
     static bool issStillEnoughAmmo(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
     static bool isCharacterAttackValid(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
     static bool isInRange(int to_check, int max);        
+
+
 };
+
+    
+
 }
 #endif

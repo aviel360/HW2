@@ -1,4 +1,5 @@
 #include "Medic.h"
+#include <memory>
 
 namespace mtm{
     Medic::Medic(Team team, units_t health, units_t ammo, units_t range, units_t power) : 
@@ -37,6 +38,13 @@ namespace mtm{
 
     void Medic::reload(){
         ammo += AMMO;
+    }
+
+    char Medic::getSymbul() {
+        if (this->team == POWERLIFTERS){
+            return 'M';
+        }
+        return 'm';
     }
     std::shared_ptr<Character> Medic::cloneAux() const {
         return std::shared_ptr<Medic>(new Medic(*this));
