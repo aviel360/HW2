@@ -1,33 +1,35 @@
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
-#include <ostream>
-#include <string>
+#include <iostream>
 
 namespace mtm{
 
+    class A {
+        public:
+        int hi;
+    }
+
+    class B : public A {
+        hi = 3;
+    }
+
+
+
     class Exceptions: std::exception{
         
-        protected:
-        std::string name; 
-
         public:
-        Exception();
-        Exception(const exception&);
-        Exception& operator=(const exception&);
-        ~Exception();
+        const char* error_message; 
 
         virtual const char* what() const noexcept override{
-            std::string general_error_message="A game related error has occurred: ";
-            std::string specific_error = this->name;
-            return general_error_message.append(specific_error); 
+            return this->error_message;
             } 
     };
 
     class IllegalArgument : public Exceptions
         : name("IllegalArgument")
-    {}};
-    class IllegalCell : public Exceptions{
-        name = IllegalCell;
+    {};
+    class IllegalCell : Exceptions{
+        error_message = "A game related error has occurred: IllegalCell";
     };
     class CellEmpty :public Exceptions{
         name = CellEmpty;
