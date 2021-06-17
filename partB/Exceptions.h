@@ -4,16 +4,6 @@
 
 namespace mtm{
 
-    class A {
-        public:
-        int hi;
-    }
-
-    class B : public A {
-        hi = 3;
-    }
-
-
 
     class Exceptions: std::exception{
         
@@ -25,24 +15,31 @@ namespace mtm{
             } 
     };
 
-    class IllegalArgument : public Exceptions
-        : name("IllegalArgument")
-    {};
-    class IllegalCell : Exceptions{
-        error_message = "A game related error has occurred: IllegalCell";
+    class IllegalArgument : public Exceptions{
+        const char* error_message = "A game related error has occurred: IllegalArgument";
+    };
+    class IllegalCell : public Exceptions{
+        const char* error_message = "A game related error has occurred: IllegalCell";
     };
     class CellEmpty :public Exceptions{
-        name = CellEmpty;
+        const char* error_message = "A game related error has occurred: CellEmpty";
     };
     class MoveTooFar : public Exceptions{
-        name = MoveTooFar;
+        const char* error_message = "A game related error has occurred:  MoveTooFar";
     };
     class CellOccupied : public Exceptions{
-        name = MoveTooFar 
+        const char* error_message = "A game related error has occurred: CellOccupied";
     };
-    class OutOfRange :public Exceptions{};
-    class OutOfAmmo : public Exceptions{};
-    class IllegalTarget :public Exceptions{};
+    class OutOfRange :public Exceptions{
+        const char* error_message = "A game related error has occurred: OutOfRange";
+
+    };
+    class OutOfAmmo : public Exceptions{
+        const char* error_message = "A game related error has occurred: OutOfAmmo";
+    };
+    class IllegalTarget :public Exceptions{
+        const char* error_message = "A game related error has occurred:  IllegalTarget";
+    };
 
     
     

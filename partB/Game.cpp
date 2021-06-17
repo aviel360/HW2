@@ -45,7 +45,7 @@ namespace mtm{
         return game;
     }
 
-    std::ostream& Game::operator<<(const Game& game)
+    std::ostream& operator<<(std::ostream& os, const Game& game)
     {
         int row = game.board_size[0], col = game.board_size[1];
         std::vector<std::vector<char>> printed_board =  std::vector<std::vector<char>>(row, std::vector<char>(col, ' '));
@@ -53,8 +53,8 @@ namespace mtm{
         const char* begin= &printed_board[0][0];
         const char* end= &(printed_board[row][col])+1;
 
-        for (int row =0; row < board_size[0]; row++ ){
-            for (int col =0; col < board_size[1]; col++ ){
+        for (int row =0; row < game.board_size[0]; row++ ){
+            for (int col =0; col < game.board_size[1]; col++ ){
                 std::shared_ptr<Character> current_character = game.board[row][col];
                 if (current_character == nullptr){
                     printed_board[row][col] = ' ';
