@@ -21,7 +21,7 @@ namespace mtm{
         virtual void move(Board board, const GridPoint& src, const GridPoint& dst) override;
         virtual void attack(Board board, const GridPoint& src, const GridPoint & dst) override;
         virtual void reload() override;
-        virtual char getSymbul() override ;
+        virtual char getSymbol() override ;
         void aoeAttack(Board board, const GridPoint & dst);
     };
 }

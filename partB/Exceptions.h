@@ -1,48 +1,45 @@
-#ifndef EXCEPTIONS_H
-#define EXCEPTIONS_H
+#ifndef EXCEPTION_H
+#define EXCEPTION_H
 #include <ostream>
 #include <string>
 
 namespace mtm{
 
-    class Exceptions: std::exception{
-        
-        protected:
-        std::string name; 
-
-        public:
-        Exception();
-        Exception(const exception&);
-        Exception& operator=(const exception&);
-        ~Exception();
-
-        virtual const char* what() const noexcept override{
-            std::string general_error_message="A game related error has occurred: ";
-            std::string specific_error = this->name;
-            return general_error_message.append(specific_error); 
-            } 
+    class Exception: std::exception{
+        virtual const char* what() const noexcept override;
     };
 
-    class IllegalArgument : public Exceptions
-        : name("IllegalArgument")
-    {}};
-    class IllegalCell : public Exceptions{
-        name = IllegalCell;
+    class IllegalArgument : public Exception{
+        virtual const char* what() const noexcept override;
     };
-    class CellEmpty :public Exceptions{
-        name = CellEmpty;
-    };
-    class MoveTooFar : public Exceptions{
-        name = MoveTooFar;
-    };
-    class CellOccupied : public Exceptions{
-        name = MoveTooFar 
-    };
-    class OutOfRange :public Exceptions{};
-    class OutOfAmmo : public Exceptions{};
-    class IllegalTarget :public Exceptions{};
 
-    
+    class IllegalCell : public Exception{
+        virtual const char* what() const noexcept override;
+    };
+
+    class CellEmpty :public Exception{
+        virtual const char* what() const noexcept override;
+    };
+
+    class MoveTooFar : public Exception{
+        virtual const char* what() const noexcept override;
+    };
+
+    class CellOccupied : public Exception{
+        virtual const char* what() const noexcept override;
+    };
+
+    class OutOfRange :public Exception{
+        virtual const char* what() const noexcept override;
+    };
+
+    class OutOfAmmo : public Exception{
+        virtual const char* what() const noexcept override;
+    };
+
+    class IllegalTarget :public Exception{
+        virtual const char* what() const noexcept override;
+    };
     
 }
 

@@ -11,8 +11,6 @@
 #define DIMENSIONS 2
 
 namespace mtm{
-
-class Exception :std::exception{};
 class Game {
     int board_size[DIMENSIONS];
     Board board;
