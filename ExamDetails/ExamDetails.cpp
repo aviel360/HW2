@@ -22,8 +22,10 @@ using std::string;
 namespace mtm{
     ExamDetails::ExamDetails(double course, int month, int day, double hour, double length, string link) :
                     course(course), month(month), day(day), hour(hour), length(length), link(link){
-        if(!isLengthValid(course)){ 
+        bool course_result = isLengthValid(course);
+        if(course_result == false){ 
             throw InvalidArgsException();
+            return;
         }
         if(!isDateValid(month, day)){
             throw InvalidDateException();
@@ -32,7 +34,7 @@ namespace mtm{
             throw InvalidTimeException();
         }
         if(!isLengthValid(length)){
-            throw InvalidTimeException();
+            throw InvalidArgsException();
         }
     }
     

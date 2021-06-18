@@ -26,6 +26,7 @@ namespace mtm{
         class InvalidDateException : public std::exception{};
         class InvalidTimeException : public std::exception{};
         class InvalidArgsException : public std::exception{};
+
     };
     
     bool isDateValid(int month, int day);
