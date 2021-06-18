@@ -8,8 +8,8 @@ namespace mtm{
         virtual std::shared_ptr<Character> cloneAux() const override;
         const int HEAD = ceil(range / 3 );
         const int MAX_ATTACK_RANGE = HEAD*2 + 1;
-        const int AOE_DAMAGE = ceil(power / 2);
-        const int DAMAGE = ceil(power / 2);
+        const int AOE_DAMAGE = ceil((double)power / 2);
+        const int DAMAGE = ceil((double)power / 2);
         static const int MAX_MOVEMENT = 3;
         static const int AMMO = 3;
         
