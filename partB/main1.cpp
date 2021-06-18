@@ -19,13 +19,13 @@ bool constructor()
     cout<<"startttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"<<endl;
     Game G = Game(1, 1);
     cout<<"past 0.1 test"<<endl;
-    assertExcept(Game G2 = Game(-1, 1), IllegalArgument);
+    assertExcept(Game G2 = Game(-1, 1), IllegalArgument&);
     cout<<"past 0.2 test"<<endl;
-    assertExcept(Game G2 = Game(0, 1), IllegalArgument);
+    assertExcept(Game G2 = Game(0, 1), IllegalArgument&);
     cout<<"past 0.3 test"<<endl;
-    assertExcept(Game G2 = Game(1, -1), IllegalArgument);
+    assertExcept(Game G2 = Game(1, -1), IllegalArgument&);
     cout<<"past 0.4 test"<<endl;
-    assertExcept(Game G2 = Game(1, 0), IllegalArgument);
+    assertExcept(Game G2 = Game(1, 0), IllegalArgument&);
     cout<<"past 1 test"<<endl;
     return true;
 }
@@ -49,10 +49,10 @@ bool createChars()
     assert(C4->getTeam() == POWERLIFTERS);
 
     cout<<"past 4 test"<<endl;
-    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 0, 1, 1, 1), IllegalArgument);
-    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, -1, 1, 1), IllegalArgument);
-    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, 1, -1, 1), IllegalArgument);
-    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, 1, 1, -1), IllegalArgument);
+    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 0, 1, 1, 1), IllegalArgument&);
+    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, -1, 1, 1), IllegalArgument&);
+    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, 1, -1, 1), IllegalArgument&);
+    assertExcept(G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, 1, 1, -1), IllegalArgument&);
     cout<<"past 5 test"<<endl;
     G.makeCharacter(mtm::SOLDIER, mtm::CROSSFITTERS, 1, 0, 0, 0);
 
@@ -80,15 +80,15 @@ bool addChars()
     G.addCharacter(mtm::GridPoint(1, 1), C5);
     G.addCharacter(mtm::GridPoint(1, 2), C6);
     cout<<"past 11 test"<<endl;
-    assertExcept(G.addCharacter(mtm::GridPoint(1, 0), C1), CellOccupied);
+    assertExcept(G.addCharacter(mtm::GridPoint(1, 0), C1), CellOccupied&);
     cout<<"past 11.1 test"<<endl;
-    assertExcept(G.addCharacter(mtm::GridPoint(-1, 0), C1), IllegalCell);
+    assertExcept(G.addCharacter(mtm::GridPoint(-1, 0), C1), IllegalCell&);
     cout<<"past 11.2 test"<<endl;
-    assertExcept(G.addCharacter(mtm::GridPoint(0, -1), C1), IllegalCell);
+    assertExcept(G.addCharacter(mtm::GridPoint(0, -1), C1), IllegalCell&);
     cout<<"past 11.3 test"<<endl;
-    assertExcept(G.addCharacter(mtm::GridPoint(0, 10), C1), IllegalCell);
+    assertExcept(G.addCharacter(mtm::GridPoint(0, 10), C1), IllegalCell&);
     cout<<"past 11.4 test"<<endl;
-    assertExcept(G.addCharacter(mtm::GridPoint(10, 0), C1), IllegalCell);
+    assertExcept(G.addCharacter(mtm::GridPoint(10, 0), C1), IllegalCell&);
     cout<<"past 12 test"<<endl;
     return true;
 }
@@ -445,9 +445,8 @@ void example3Hemi() {
     g1.attack(GridPoint(2, 2), GridPoint(4, 0));
     Team team1 = CROSSFITTERS;
     Team* team = &team1;
-    bool t = g1.isOver(team);
-    std::cout << g1 << std::endl;
-    std::cout << "winning team is: " << team1 << std::endl;
+    assert(g1.isOver(team) == false);
+
 
 }
 
@@ -466,7 +465,7 @@ void example4Hemi()
     Team* team = NULL;
     bool t = g1.isOver(team);
     assert(t == true);
-    std::cout << g1;
+    std::cout << g1 << std::endl;
 
 }
 
@@ -521,12 +520,12 @@ void example5Hemi()
     g1.attack(GridPoint(1, 1), GridPoint(3, 2));
     g1.move(GridPoint(1, 1), GridPoint(0, 1));
     g1.attack(GridPoint(3, 1), GridPoint(0, 1));
-    std::cout << g1;
+    std::cout << g1 << std::endl;
     for (int i = 0; i < 3; i++)
     {
         g1.attack(GridPoint(3, 0), GridPoint(3, 0)); //s wasting ammo for no reason
     }
-    std::cout << g1;
+    std::cout << g1 << std::endl;
     try {
         g1.attack(GridPoint(3, 0), GridPoint(0, 0));
     }
@@ -534,11 +533,11 @@ void example5Hemi()
     {
         std::cout << e.what() << std::endl;
     }
-    std::cout << g1;
+    std::cout << g1 << std::endl;
     g1.attack(GridPoint(0, 0), GridPoint(3, 0));
-    std::cout << g1;
+    std::cout << g1 << endl;
     g1.attack(GridPoint(3, 1), GridPoint(0, 0));
-    std::cout << g1;
+    std::cout << g1 << endl;
     try
     {
         g1.attack(GridPoint(3, 1), GridPoint(0, 3));
@@ -547,16 +546,19 @@ void example5Hemi()
     {
         std::cout << e.what() << std::endl;
     }
-    std::cout << g1;
-    g1.move(GridPoint(0, 3), GridPoint(0, 1));
-    std::cout << g1;
-    g1.attack(GridPoint(3, 1), GridPoint(0, 1));
-    std::cout << g1;
+    std::cout << g1 << endl;
+    try {
+        g1.move(GridPoint(0, 3), GridPoint(0, 1));
+    }catch (mtm::CellOccupied& e){
+        std::cout << e.what() << std::endl;
+    }
+    std::cout << g1 << std::endl;
+    g1.attack(GridPoint(0, 1), GridPoint(3, 1));
+    std::cout << g1 << std::endl;
     Team team2 = POWERLIFTERS;
     Team* team3 = &team2;
-    bool t1 = g1.isOver(team3);
-    std::cout << "Winning team is: " << team2;
-    //Should be 1 -croosfiters
+    assert(g1.isOver(team3) == true);
+    std::cout << "Winning team is: " << team2 << std::endl;
 }
 
 int main()

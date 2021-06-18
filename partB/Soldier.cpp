@@ -46,10 +46,11 @@ namespace mtm{
         for(int i = 0; i < MAX_ATTACK_RANGE; i++){
             for(int j = 0; j < MAX_ATTACK_RANGE; j++){
                 GridPoint current(head.row + i, head.col + j);
-                if(dst.distance(dst, current) > HEAD || i == dst.row + HEAD && j == dst.col + HEAD){
+                if(dst.distance(dst, current) > HEAD || (i == dst.row + HEAD && j == dst.col + HEAD)){
                     continue;
                 }
                 try {
+                    board.at(current.row).at(current.col);
                     if(board[current.row][current.col] != nullptr){
                         if (board[current.row][current.col]->getTeam() != team ){
                             board[current.row][current.col]->decreaseHealth(AOE_DAMAGE);
@@ -59,7 +60,7 @@ namespace mtm{
                         }   
                     }
                 }
-                catch (const std::out_of_range){
+                catch (const std::out_of_range& e){
                     continue;
                 }
             }
