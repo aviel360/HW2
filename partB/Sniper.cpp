@@ -14,7 +14,7 @@ namespace mtm{
     }
     
     void Sniper::attack(Board& board, const GridPoint& src, const GridPoint & dst){
-        if(src.distance(src, dst) > range || src.distance(src, dst) < ceil(range / 2)){
+        if(src.distance(src, dst) > range || src.distance(src, dst) < ceil(static_cast<double>(range / 2))){
             throw OutOfRange();
         }
         if(ammo == 0){
