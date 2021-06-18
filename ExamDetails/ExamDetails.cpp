@@ -25,7 +25,7 @@ namespace mtm{
         if(!isDateValid(month, day)){
             throw InvalidDateException();
         }
-        if(!isTimeValid(hour)){
+        if(!isTimeValid(hour) || length <= 0){
             throw InvalidTimeException();
         }
     }
