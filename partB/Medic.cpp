@@ -20,6 +20,7 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
     }
     
     void Medic::attack(Board& board, const GridPoint& src, const GridPoint & dst){
+        
         if(src.distance(src, dst) > range){
             throw OutOfRange();
         }

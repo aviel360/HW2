@@ -6,9 +6,9 @@
 namespace mtm{
     class Soldier : public Character {
         virtual std::shared_ptr<Character> cloneAux() const override;
-        const int HEAD = ceil(range / 3 );
+        const int HEAD = ceil(static_cast<double>(range) /3 );
         const int MAX_ATTACK_RANGE = HEAD*2 + 1;
-        const int AOE_DAMAGE = ceil(static_cast<double>(power / 2));
+        const int AOE_DAMAGE = ceil(static_cast<double>(power) / 2);
         static const int MAX_MOVEMENT = 3;
         static const int AMMO = 3;
         

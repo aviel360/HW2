@@ -116,7 +116,7 @@ bool copyConst()
   //  G.~Game();
 
     G3.reload(GridPoint(0, 0));
-    cout<<"reached after line 105 "<<endl;
+    cout<<"reached after line 105"<< endl;
     return true;
 
 }
@@ -445,7 +445,7 @@ void example3Hemi() {
     g1.attack(GridPoint(2, 2), GridPoint(4, 0));
     Team team1 = CROSSFITTERS;
     Team* team = &team1;
-    assert(g1.isOver(team) == false);
+    assert(g1.isOver(team) == true);
 
 
 }

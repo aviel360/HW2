@@ -14,7 +14,7 @@ namespace mtm{
     }
     
     void Sniper::attack(Board& board, const GridPoint& src, const GridPoint & dst){
-        if(src.distance(src, dst) > range || src.distance(src, dst) < ceil(static_cast<double>(range / 2))){
+        if(src.distance(src, dst) > range || src.distance(src, dst) < ceil(static_cast<double>(range) / 2)){
             throw OutOfRange();
         }
         if(ammo == 0){
@@ -28,9 +28,6 @@ namespace mtm{
             power = power * 2;
         }
         board[dst.row][dst.col]->decreaseHealth(power);
-        if(board[dst.row][dst.col]->getHealth() <= 0){
-                board[dst.row][dst.col] = nullptr;
-        }
         headshot++;
         ammo--;
         power = temp;

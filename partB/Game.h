@@ -15,11 +15,21 @@ namespace mtm{
         int board_size[DIMENSIONS];
         Board board;
 
+        bool isCellInBoard(const GridPoint& coordinates);
+        static bool isCellOccupied(const GridPoint& coordinates, Board board);
+        static bool isTypeValid(CharacterType type);
+        static bool isTeamValid(Team team);
+        static bool isHealthValid(units_t health);
+        static bool isAmmoValid(units_t ammo);
+        static bool isRangeValid(units_t range);
+        static bool isPowerValid(units_t power);
+        static bool isInRange(int to_check, int max);
+
         public:
         Game(int height, int width);
-        ~Game() = default;
-        Game(const Game& other) = default;
-        Game& operator=(const Game& other) = default;
+        ~Game();
+        Game(const Game& other);
+        Game& operator=(const Game& other);
         void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
         virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
         void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
@@ -29,17 +39,7 @@ namespace mtm{
         
         bool isOver(Team* winningTeam=NULL) const;
 
-        friend std::ostream& operator<<(std::ostream& os, const Game& game);
-
-        static bool isCellInBoard(const GridPoint& coordinates, int board_size[]);
-        static bool isCellOccupied(const GridPoint& coordinates, Board board);
-        static bool isTypeValid(CharacterType type);
-        static bool isTeamValid(Team team);
-        static bool isHealthValid(units_t health);
-        static bool isAmmoValid(units_t ammo);
-        static bool isRangeValid(units_t range);
-        static bool isPowerValid(units_t power);
-        static bool isInRange(int to_check, int max);        
+        friend std::ostream& operator<<(std::ostream& os, const Game& game);      
     };
 }
 #endif
