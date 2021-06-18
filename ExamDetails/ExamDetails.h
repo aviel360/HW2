@@ -12,7 +12,7 @@ namespace mtm{
         std::string link;
         
     public:
-        ExamDetails(int course, int month, int day, double hour, double length, std::string link = "");
+        ExamDetails(double course, int month, int day, double hour, double length, std::string link = "");
         ExamDetails() = default;
         ~ExamDetails() = default;
         ExamDetails(const ExamDetails& exam) = default;

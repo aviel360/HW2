@@ -1,5 +1,7 @@
 #include <iostream>
+#include <cmath> 
 #include "ExamDetails.h"
+#include "SortedList.h"
 
 #define DAYS_IN_MONTH 30
 #define HALF_HOUR 3
@@ -18,9 +20,9 @@
 using std::endl;
 using std::string;
 namespace mtm{
-    ExamDetails::ExamDetails(int course, int month, int day, double hour, double length, string link) :
+    ExamDetails::ExamDetails(double course, int month, int day, double hour, double length, string link) :
                     course(course), month(month), day(day), hour(hour), length(length), link(link){
-        if(!isLengthValid(static_cast<double>(course))){ 
+        if(!isLengthValid(course)){ 
             throw InvalidArgsException();
         }
         if(!isDateValid(month, day)){
@@ -80,11 +82,18 @@ namespace mtm{
         while(hour > 0 && max_time > 0){
             hour -= 1;
             max_time--;
+            if (std::abs(hour) < 0.00001 ||std::abs(hour - HALF) <0.00001){
+                return true; 
+            }
         }
-        return hour == 0 || hour + HALF == 0;
+        return hour == 0 || hour + HALF == 0 ;
     }
 
     bool isLengthValid(double length){
-        return length > 0;
+        double abs_length = std::abs(length);
+        double abs_floor_length = std::floor(std::abs(length));
+        double diffrence = abs_length - abs_floor_length;
+
+        return diffrence < 0.00001;
     }
 }
