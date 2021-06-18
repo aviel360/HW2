@@ -12,7 +12,7 @@ namespace mtm{
         std::string link;
         
     public:
-        ExamDetails(double course, int month, int day, double hour, double length, std::string link = "");
+        ExamDetails(int course, int month, int day, double hour, int length, std::string link = "");
         ExamDetails() = default;
         ~ExamDetails() = default;
         ExamDetails(const ExamDetails& exam) = default;
@@ -31,7 +31,6 @@ namespace mtm{
     
     bool isDateValid(int month, int day);
     bool isTimeValid(double hour);
-    bool isLengthValid(double length);
 }
 
 #endif

@@ -448,66 +448,6 @@ int main()
     PASSED_THE("ExamDetails Exception - InvalidTimeException()")
     PASSED_THE_("ExamDetails Exception - InvalidTimeException()")
 
-    test_counter++;
-    LET_ME_TEST("ExamDetails Exception - InvalidArgsException()", test_counter)
-    LET_ME_TEST_("ExamDetails Exception - InvalidArgsException()", test_counter)
-    /*try {
-        ExamDetails invalid_arg1(1.1, 1, 1, 1, 1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidArgsException& e) {
-        cout << "Invalid Course Number - (course number is not an integer)" << endl;
-        to_the_file << "Invalid Course Number - (course number is not an integer)" << endl;
-    }*/
-    try {
-        ExamDetails invalid_arg2(1, 1, 1, 1, 1.1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidArgsException& e) {
-        cout << "Invalid Exam Length - the exam length is not an integer" << endl;
-        to_the_file << "Invalid Exam Length - the exam length is not an integer" << endl;
-    }
-    PASSED_THE("ExamDetails Exception - InvalidArgsException()")
-    PASSED_THE_("ExamDetails Exception - InvalidArgsException()")
-
-    test_counter++;
-    LET_ME_TEST("ExamDetails Exception - Exceptions Order", test_counter)
-    LET_ME_TEST_("ExamDetails Exception - Exceptions Order", test_counter)
-    try {
-        ExamDetails exceptions_order1(1.1, 1.1, 1.1, 1.1, 1.1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidArgsException& e) {
-        cout << "Priority to ArgsException - Course number is invalid" << endl;
-        to_the_file << "Priority to ArgsException - Course number is invalid" << endl;
-    }
-    try {
-        ExamDetails exceptions_order2(1, 1.1, 1.1, 1.1, 1.1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidDateException& e) {
-        cout << "Priority to DateException - Month number is invalid" << endl;
-        to_the_file << "Priority to DateException - Month number is invalid" << endl;
-    }
-    try {
-        ExamDetails exceptions_order3(1, 1, 1.1, 1.1, 1.1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidDateException& e) {
-        cout << "Priority to DateException - Day number is invalid" << endl;
-        to_the_file << "Priority to DateException - Day number is invalid" << endl;
-    }
-    try {
-        ExamDetails exceptions_order4(1, 1, 1, 1.1, 1.1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidTimeException& e) {
-        cout << "Priority to TimeException - Hour number is invalid" << endl;
-        to_the_file << "Priority to TimeException - Hour number is invalid" << endl;
-    }
-    try {
-        ExamDetails exceptions_order(1, 1, 1, 1, 1.1, "https://tinyurl.com/ym8wf46t");
-    }
-    catch (ExamDetails::InvalidArgsException& e) {
-        cout << "Priority to ArgsException - Length number is invalid" << endl;
-        to_the_file << "Priority to ArgsException - Length number is invalid" << endl;
-    }
-    PASSED_THE("ExamDetails Exception - Exceptions Order")
-    PASSED_THE_("ExamDetails Exception - Exceptions Order")
     to_the_file.close();
 
     cout << endl << "Now compare the output in the file 'Your_output.txt' with 'Expected_output.txt'";

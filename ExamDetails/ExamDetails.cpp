@@ -20,21 +20,13 @@
 using std::endl;
 using std::string;
 namespace mtm{
-    ExamDetails::ExamDetails(double course, int month, int day, double hour, double length, string link) :
+    ExamDetails::ExamDetails(int course, int month, int day, double hour, int length, string link) :
                     course(course), month(month), day(day), hour(hour), length(length), link(link){
-        bool course_result = isLengthValid(course);
-        if(course_result == false){ 
-            throw InvalidArgsException();
-            return;
-        }
         if(!isDateValid(month, day)){
             throw InvalidDateException();
         }
         if(!isTimeValid(hour)){
             throw InvalidTimeException();
-        }
-        if(!isLengthValid(length)){
-            throw InvalidArgsException();
         }
     }
     
@@ -91,11 +83,4 @@ namespace mtm{
         return hour == 0 || hour + HALF == 0 ;
     }
 
-    bool isLengthValid(double length){
-        double abs_length = std::abs(length);
-        double abs_floor_length = std::floor(std::abs(length));
-        double diffrence = abs_length - abs_floor_length;
-
-        return diffrence < 0.00001;
-    }
 }
