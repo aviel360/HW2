@@ -11,6 +11,8 @@
 #define assertExcept(func, exception) try{func;} catch(exception e){}
 
 using namespace mtm;
+using namespace std;
+
 
 bool constructor()
 {

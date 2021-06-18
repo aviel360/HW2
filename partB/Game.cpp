@@ -200,7 +200,7 @@ namespace mtm{
     }
   
    bool Game::isInRange(int to_check, int max){
-        return (to_check >= 0 && to_check <= max);
+        return (to_check >= 0 && to_check < max);
     }
 
     bool Game::isCellInBoard(const GridPoint& coordinates, int board_size[]){
@@ -229,7 +229,7 @@ namespace mtm{
     }
 
     bool Game::isRangeValid(units_t range){
-        return (range > 0) ;
+        return (range >= 0) ;
     }
 
     bool Game::isPowerValid(units_t power){
