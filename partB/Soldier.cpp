@@ -49,11 +49,16 @@ namespace mtm{
                 if(dst.distance(dst, current) > HEAD || i == dst.row + HEAD && j == dst.col + HEAD){
                     continue;
                 }
-                if(board[current.row][current.col] != nullptr && board[current.row][current.col]->getTeam() != team ){
-                    board[current.row][current.col]->decreaseHealth(AOE_DAMAGE);
-                    if(board[current.row][current.col]->getHealth() <= 0){
-                        board[current.row][current.col] = nullptr;
+                try {
+                    if(board[current.row][current.col] != nullptr && board[current.row][current.col]->getTeam() != team ){
+                        board[current.row][current.col]->decreaseHealth(AOE_DAMAGE);
+                        if(board[current.row][current.col]->getHealth() <= 0){
+                            board[current.row][current.col] = nullptr;
+                        }
                     }
+                }
+                catch (const std::out_of_range){
+                    continue;
                 }
             }
         }
