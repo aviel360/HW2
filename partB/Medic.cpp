@@ -35,7 +35,6 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
             board[dst.row][dst.col]->decreaseHealth(power);
         }
         if(board[dst.row][ dst.col]->getTeam() == team ){
-            ammo--;
             board[dst.row][ dst.col]->increaseHealth(power);
         }
     }
