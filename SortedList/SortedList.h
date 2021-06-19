@@ -96,10 +96,12 @@ namespace mtm{
         while(ptr != nullptr){
             ptr->setValue(current->getValue());
             current = current->getNext();
-            ptr = ptr->getNext();
             if(current == nullptr){
-                deleteList(ptr);
+                deleteList(ptr->getNext());
+                ptr->setNext(nullptr);
+                break;
             }
+            ptr = ptr->getNext();
         }
         while(current != nullptr){
             insert(current->getValue());
@@ -126,6 +128,9 @@ namespace mtm{
 
     template <class T>
     typename SortedList<T>::const_iterator SortedList<T>::begin() const{
+        if(first->getNext() == nullptr){
+            throw std::out_of_range ("Out Of Range!");
+        }
         return SortedList<T>::const_iterator(first->getNext());
     }
 
@@ -167,6 +172,9 @@ namespace mtm{
 
     template <class T>
     const T& SortedList<T>::const_iterator::operator*() const{ 
+        if(current == nullptr){
+            throw std::out_of_range ("Out of rannge!");
+        }
         return current->getValue();
     }
 
