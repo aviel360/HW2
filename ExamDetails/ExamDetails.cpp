@@ -56,7 +56,7 @@ namespace mtm{
     std::ostream& operator<<(std::ostream& os, const ExamDetails& exam){
         int time = exam.hour > static_cast<int>(exam.hour) ? HALF_HOUR : ROUND_HOUR; 
         os << "Course Number: " << exam.course << endl 
-        << "Time: " << exam.day << "." << exam.month << " at " << (int)exam.hour << ":" << time << "0" << endl
+        << "Time: "<< exam.day << "." << exam.month <<" at "<< static_cast<int>(exam.hour) << ":" <<time<< "0" << endl
         << "Duration: " << exam.length << ":00" << endl
         << "Zoom Link: " << exam.link << endl;
         return os;
@@ -76,9 +76,6 @@ namespace mtm{
         while(hour > 0 && max_time > 0){
             hour -= 1;
             max_time--;
-            if (std::abs(hour) < 0.00001 ||std::abs(hour - HALF) <0.00001){
-                return true; 
-            }
         }
         return hour == 0 || hour + HALF == 0 ;
     }

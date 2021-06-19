@@ -96,10 +96,12 @@ namespace mtm{
         while(ptr != nullptr){
             ptr->setValue(current->getValue());
             current = current->getNext();
-            ptr = ptr->getNext();
             if(current == nullptr){
-                deleteList(ptr);
+                deleteList(ptr->getNext());
+                ptr->setNext(nullptr);
+                break;
             }
+            ptr = ptr->getNext();
         }
         while(current != nullptr){
             insert(current->getValue());
