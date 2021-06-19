@@ -131,4 +131,8 @@ CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/Exa
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/ostream.tcc \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/istream \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc \
- C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.h
+ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/cmath \
+ C:/TDM-GCC-64/x86_64-w64-mingw32/include/math.h \
+ C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.h \
+ C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\SortedList.h \
+ C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\Node.h

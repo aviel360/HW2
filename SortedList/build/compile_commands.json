@@ -1,12 +1,7 @@
 [
 {
   "directory": "C:/Users/avial/OneDrive/Documents/GitHub/HW2/SortedList/build",
-  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\list.dir\\part_a_test.cpp.obj -c C:\\Users\\avial\\OneDrive\\Documents\\GitHub\\HW2\\SortedList\\part_a_test.cpp",
-  "file": "C:/Users/avial/OneDrive/Documents/GitHub/HW2/SortedList/part_a_test.cpp"
-},
-{
-  "directory": "C:/Users/avial/OneDrive/Documents/GitHub/HW2/SortedList/build",
-  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\list.dir\\C_\\Users\\avial\\OneDrive\\Documents\\GitHub\\HW2\\ExamDetails\\ExamDetails.cpp.obj -c C:\\Users\\avial\\OneDrive\\Documents\\GitHub\\HW2\\ExamDetails\\ExamDetails.cpp",
-  "file": "C:/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp"
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\list.dir\\sortedTest.cpp.obj -c C:\\Users\\avial\\OneDrive\\Documents\\GitHub\\HW2\\SortedList\\sortedTest.cpp",
+  "file": "C:/Users/avial/OneDrive/Documents/GitHub/HW2/SortedList/sortedTest.cpp"
 }
 ]

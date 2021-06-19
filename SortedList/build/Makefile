@@ -128,53 +128,29 @@ list/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/build
 .PHONY : list/fast
 
-C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.obj: C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj
-.PHONY : C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.obj
+sortedTest.obj: sortedTest.cpp.obj
+.PHONY : sortedTest.obj
 
 # target to build an object file
-C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj
-.PHONY : C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj
+sortedTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/sortedTest.cpp.obj
+.PHONY : sortedTest.cpp.obj
 
-C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.i: C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.i
-.PHONY : C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.i
-
-# target to preprocess a source file
-C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.i
-.PHONY : C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.i
-
-C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.s: C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.s
-.PHONY : C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.s
-
-# target to generate assembly for a file
-C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.s
-.PHONY : C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.s
-
-part_a_test.obj: part_a_test.cpp.obj
-.PHONY : part_a_test.obj
-
-# target to build an object file
-part_a_test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/part_a_test.cpp.obj
-.PHONY : part_a_test.cpp.obj
-
-part_a_test.i: part_a_test.cpp.i
-.PHONY : part_a_test.i
+sortedTest.i: sortedTest.cpp.i
+.PHONY : sortedTest.i
 
 # target to preprocess a source file
-part_a_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/part_a_test.cpp.i
-.PHONY : part_a_test.cpp.i
+sortedTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/sortedTest.cpp.i
+.PHONY : sortedTest.cpp.i
 
-part_a_test.s: part_a_test.cpp.s
-.PHONY : part_a_test.s
+sortedTest.s: sortedTest.cpp.s
+.PHONY : sortedTest.s
 
 # target to generate assembly for a file
-part_a_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/part_a_test.cpp.s
-.PHONY : part_a_test.cpp.s
+sortedTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\list.dir\build.make CMakeFiles/list.dir/sortedTest.cpp.s
+.PHONY : sortedTest.cpp.s
 
 # Help Target
 help:
@@ -185,12 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... list
-	@echo ... C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.obj
-	@echo ... C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.i
-	@echo ... C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.s
-	@echo ... part_a_test.obj
-	@echo ... part_a_test.i
-	@echo ... part_a_test.s
+	@echo ... sortedTest.obj
+	@echo ... sortedTest.i
+	@echo ... sortedTest.s
 .PHONY : help
 
 

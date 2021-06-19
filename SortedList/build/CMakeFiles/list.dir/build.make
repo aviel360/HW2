@@ -68,49 +68,33 @@ include CMakeFiles/list.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/list.dir/flags.make
 
-CMakeFiles/list.dir/part_a_test.cpp.obj: CMakeFiles/list.dir/flags.make
-CMakeFiles/list.dir/part_a_test.cpp.obj: ../part_a_test.cpp
-CMakeFiles/list.dir/part_a_test.cpp.obj: CMakeFiles/list.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/list.dir/part_a_test.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/list.dir/part_a_test.cpp.obj -MF CMakeFiles\list.dir\part_a_test.cpp.obj.d -o CMakeFiles\list.dir\part_a_test.cpp.obj -c C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\part_a_test.cpp
+CMakeFiles/list.dir/sortedTest.cpp.obj: CMakeFiles/list.dir/flags.make
+CMakeFiles/list.dir/sortedTest.cpp.obj: ../sortedTest.cpp
+CMakeFiles/list.dir/sortedTest.cpp.obj: CMakeFiles/list.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/list.dir/sortedTest.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/list.dir/sortedTest.cpp.obj -MF CMakeFiles\list.dir\sortedTest.cpp.obj.d -o CMakeFiles\list.dir\sortedTest.cpp.obj -c C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\sortedTest.cpp
 
-CMakeFiles/list.dir/part_a_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/list.dir/part_a_test.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\part_a_test.cpp > CMakeFiles\list.dir\part_a_test.cpp.i
+CMakeFiles/list.dir/sortedTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/list.dir/sortedTest.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\sortedTest.cpp > CMakeFiles\list.dir\sortedTest.cpp.i
 
-CMakeFiles/list.dir/part_a_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/list.dir/part_a_test.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\part_a_test.cpp -o CMakeFiles\list.dir\part_a_test.cpp.s
-
-CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj: CMakeFiles/list.dir/flags.make
-CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj: C:/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp
-CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj: CMakeFiles/list.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj -MF CMakeFiles\list.dir\C_\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp.obj.d -o CMakeFiles\list.dir\C_\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp.obj -c C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp
-
-CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp > CMakeFiles\list.dir\C_\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp.i
-
-CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp -o CMakeFiles\list.dir\C_\Users\avial\OneDrive\Documents\GitHub\HW2\ExamDetails\ExamDetails.cpp.s
+CMakeFiles/list.dir/sortedTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/list.dir/sortedTest.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\sortedTest.cpp -o CMakeFiles\list.dir\sortedTest.cpp.s
 
 # Object files for target list
 list_OBJECTS = \
-"CMakeFiles/list.dir/part_a_test.cpp.obj" \
-"CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj"
+"CMakeFiles/list.dir/sortedTest.cpp.obj"
 
 # External object files for target list
 list_EXTERNAL_OBJECTS =
 
-list.exe: CMakeFiles/list.dir/part_a_test.cpp.obj
-list.exe: CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj
+list.exe: CMakeFiles/list.dir/sortedTest.cpp.obj
 list.exe: CMakeFiles/list.dir/build.make
 list.exe: CMakeFiles/list.dir/linklibs.rsp
 list.exe: CMakeFiles/list.dir/objects1.rsp
 list.exe: CMakeFiles/list.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable list.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\avial\OneDrive\Documents\GitHub\HW2\SortedList\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable list.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\list.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
