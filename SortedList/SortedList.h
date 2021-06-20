@@ -50,6 +50,9 @@ namespace mtm{
     SortedList<T>::SortedList(const SortedList& list){
         first = new Node<T>();
         Node<T>* current = list.first->getNext();
+        if(current == nullptr){
+            return;
+        }
         while(current != nullptr){
             insert(current->getValue());
             current = current->getNext();
@@ -73,7 +76,7 @@ namespace mtm{
             ptr = ptr->getNext();
         }
         Node<T>* temp = ptr->getNext();
-        ptr->setNext(it.current->getNext());
+        ptr->setNext(temp->getNext());
         delete temp;
     }
 
@@ -91,20 +94,10 @@ namespace mtm{
         if(this == &list) { 
             return *this; 
         }
-        Node<T>* ptr = first->getNext();
+        deleteList(first->getNext());
         Node<T>* current = list.first->getNext();
-        while(ptr != nullptr){
-            ptr->setValue(current->getValue());
-            current = current->getNext();
-            if(current == nullptr){
-                deleteList(ptr->getNext());
-                ptr->setNext(nullptr);
-                break;
-            }
-            ptr = ptr->getNext();
-        }
         while(current != nullptr){
-            insert(current->getValue());
+            this->insert(current->getValue());
             current = current->getNext();
         }
         return *this;
