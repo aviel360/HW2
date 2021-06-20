@@ -22,14 +22,15 @@ namespace mtm{
         const T& getValue() ;
         void setNext(Node* node);
         void setValue(T the_value);
-        
     };
     
     template <class T>
     Node<T>::Node() : value(nullptr), next(nullptr) {}
 
     template <class T>
-    Node<T>::Node(T the_value, Node* next_node) : value(new T(the_value)), next(next_node){}
+    Node<T>::Node(T the_value, Node* next_node) : next(next_node){
+        value = new T(the_value);
+    }
 
     template <class T>
     Node<T>::~Node(){
