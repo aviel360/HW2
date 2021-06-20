@@ -11,7 +11,7 @@ namespace mtm{
 
 
     public:
-        Node();
+        Node() = delete;
         ~Node() = default;
         Node(T value, Node* next = nullptr);
         Node(const Node& node) = default;
@@ -24,9 +24,6 @@ namespace mtm{
         void setValue(T the_value);
         
     };
-
-    template <class T>
-    Node<T>::Node() : next(nullptr){}
     
     template <class T>
     Node<T>::Node(T the_value, Node* next_node) : value(the_value), next(next_node){}

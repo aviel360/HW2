@@ -42,13 +42,11 @@ namespace mtm{
     };
 
     template <class T>
-    SortedList<T>::SortedList(){
-        first = new Node<T>(); 
-    }
+    SortedList<T>::SortedList() : first(nullptr){}
 
     template <class T>
     SortedList<T>::SortedList(const SortedList& list){
-        first = new Node<T>();
+        first = new Node<T>(*list.first);
         Node<T>* current = list.first->getNext();
         while(current != nullptr){
             insert(current->getValue());
@@ -59,6 +57,9 @@ namespace mtm{
     template <class T>
     void SortedList<T>::insert(const T& value){
         Node<T>* ptr = first;
+        if(ptr == nullptr){
+            Node<T>* node = new Node<T>(value,nullptr);
+        }
         while(ptr->getNext() != nullptr && ptr->getNext()->getValue() < value){
             ptr = ptr->getNext();
         }
@@ -69,6 +70,9 @@ namespace mtm{
     template <class T>
     void SortedList<T>::remove(const SortedList<T>::const_iterator &it){
         Node<T>* ptr = first;
+        if(ptr == nullptr){
+            throw std::out_of_range ("Out of range!");
+        }
         while(ptr->getNext()->getValue() != *it){
             ptr = ptr->getNext();
         }
@@ -93,6 +97,12 @@ namespace mtm{
         }
         Node<T>* ptr = first->getNext();
         Node<T>* current = list.first->getNext();
+        if(first == nullptr){
+            while(current != nullptr){
+                insert(current->getValue());
+                current = current->getNext();
+            }
+        }
         while(ptr != nullptr){
             ptr->setValue(current->getValue());
             current = current->getNext();
@@ -119,6 +129,9 @@ namespace mtm{
     int SortedList<T>::length(){
         int count = 0;
         Node<T>* current = first;
+        if(first == nullptr){
+            return count;
+        }
         while(current->getNext() != nullptr){
             count++;
             current = current->getNext();
@@ -128,7 +141,7 @@ namespace mtm{
 
     template <class T>
     typename SortedList<T>::const_iterator SortedList<T>::begin() const{
-        if(first->getNext() == nullptr){
+        if(first == nullptr || first->getNext() == nullptr){
             throw std::out_of_range ("Out Of Range!");
         }
         return SortedList<T>::const_iterator(first->getNext());
@@ -143,6 +156,9 @@ namespace mtm{
     template<class Condition>
     SortedList<T> SortedList<T>::filter(Condition rule) const{
         SortedList<T> list = SortedList<T>();
+        if(first == nullptr){
+            return list;
+        }
         Node<T>* ptr = first->getNext();
         while(ptr != nullptr){
             if(rule(ptr->getValue())){
@@ -157,6 +173,9 @@ namespace mtm{
     template<class Condition>
     SortedList<T> SortedList<T>::apply(Condition rule){
         SortedList<T> list = SortedList<T>();
+        if(first == nullptr){
+            return list;
+        }
         Node<T>* ptr = first->getNext();
         while(ptr != nullptr){
             list.insert(rule(ptr->getValue()));

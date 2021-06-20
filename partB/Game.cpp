@@ -51,7 +51,7 @@ namespace mtm{
                         (board_size[0], std::vector<std::shared_ptr<Character>>(board_size[1], nullptr));
         for (int row = 0; row < board_size[0]; row++){
             for (int col = 0; col < board_size[1]; col++){
-                if(board[row][col] != nullptr){
+                if(other.board[row][col] != nullptr){
                     board[row][col] = other.board[row][col]->clone();
                 }
             }
@@ -127,9 +127,6 @@ namespace mtm{
         }
         if (!isCellOccupied(src_coordinates, this->board)){
             throw CellEmpty();
-        }
-        if(isCellOccupied(dst_coordinates,this->board)){
-            throw CellOccupied();
         }
         board[src_coordinates.row][src_coordinates.col]->move(board, src_coordinates, dst_coordinates);
         

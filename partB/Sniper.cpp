@@ -9,6 +9,9 @@ namespace mtm{
         if(dst.distance(src, dst) > MAX_MOVEMENT){
             throw MoveTooFar();
         }
+        if(board[dst.row][dst.col] != nullptr){
+            throw CellOccupied();
+        }
         board[dst.row][dst.col] = board[src.row][ src.col];
         board[src.row][src.col] = nullptr;
     }

@@ -18,6 +18,6 @@ set(CMAKE_CPP_FLAGS ${MTM_FLAGS_DEBUG})
 
 
 # Add the names of your source files here
-set(CPP_FILES avielTest.cpp Game.cpp Exceptions.cpp Character.cpp Medic.cpp Sniper.cpp Soldier.cpp Auxiliaries.cpp)
+set(CPP_FILES partC_tester.cpp Game.cpp Exceptions.cpp Character.cpp Medic.cpp Sniper.cpp Soldier.cpp Auxiliaries.cpp)
 
 add_executable(part_b ${CPP_FILES})

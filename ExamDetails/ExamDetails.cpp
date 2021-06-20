@@ -68,7 +68,7 @@ namespace mtm{
     }
 
     bool isDateValid(int month, int day){
-        return (month > 0 && month <= MAX_MONTH) || (day > 0 && day <= MAX_DAY);
+        return (month > 0 && month <= MAX_MONTH) && (day > 0 && day <= MAX_DAY);
     }
 
     bool isTimeValid(double hour){
