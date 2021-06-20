@@ -1,5 +1,4 @@
 #include <iostream>
-#include "../ExamDetails/ExamDetails.h"
 #include "SortedList.h"
 #include <assert.h>
 #include "testClass.h"
@@ -17,9 +16,9 @@ string getLen(string str)
     return std::to_string(str.length());
 }
 //
-bool isTrollLink(const ExamDetails& exam) {
-    return (exam.getLink().find("tinyurl") != string::npos);
-}
+// bool isTrollLink(const ExamDetails& exam) {
+//     return (exam.getLink().find("tinyurl") != string::npos);
+// }
 //
 template<class T>
 void printList(SortedList<T> list) {

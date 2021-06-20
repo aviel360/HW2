@@ -6,13 +6,13 @@
 namespace mtm{
     template <class T>
     class Node{
-        T value;
+        T* value;
         Node* next;
 
 
     public:
-        Node() = delete;
-        ~Node() = default;
+        Node();
+        ~Node();
         Node(T value, Node* next = nullptr);
         Node(const Node& node) = default;
         Node& operator=(const Node&);
@@ -26,24 +26,29 @@ namespace mtm{
     };
     
     template <class T>
-    Node<T>::Node(T the_value, Node* next_node) : value(the_value), next(next_node){}
+    Node<T>::Node() : value(nullptr), next(nullptr) {}
 
+    template <class T>
+    Node<T>::Node(T the_value, Node* next_node) : value(new T(the_value)), next(next_node){}
+
+    template <class T>
+    Node<T>::~Node(){
+        delete value;
+    }
     template <class T>
     Node<T>& Node<T>::operator=(const Node& node) 
     {
-    this->value = node.value;
+    if(*this == node){
+        return *this;
+    }
+    delete value;
+    this->value = new T(node.value);
     this->next = node.next;
     return *this;
     }
 
     template <class T>
     bool Node<T>::operator ==(const Node* node) const{
-/*        if(this != nullptr && node == nullptr || this == nullptr && node != nullptr ){
-            return false;
-        }
-        if(this == nullptr && node == nullptr){
-            return true;
-        }*/
         return (this == node);
     }
 
@@ -59,7 +64,7 @@ namespace mtm{
 
     template <class T>
     const T& Node<T>::getValue()  {
-        return this->value;
+        return *(this->value);
     }
 
     template <class T>
@@ -69,7 +74,7 @@ namespace mtm{
 
     template <class T>
     void Node<T>::setValue(T the_value){
-        this->value = the_value;
+        *(this->value) = the_value;
     }
 }
 

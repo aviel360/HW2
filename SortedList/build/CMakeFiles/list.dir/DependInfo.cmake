@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp" "CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj" "gcc" "CMakeFiles/list.dir/C_/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.cpp.obj.d"
   "C:/Users/avial/OneDrive/Documents/GitHub/HW2/SortedList/crazyTest.cpp" "CMakeFiles/list.dir/crazyTest.cpp.obj" "gcc" "CMakeFiles/list.dir/crazyTest.cpp.obj.d"
   )
 

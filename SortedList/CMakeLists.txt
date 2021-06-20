@@ -18,6 +18,6 @@ set(CMAKE_CPP_FLAGS ${MTM_FLAGS_DEBUG})
 
 
 # Add the names of your source files here
-set(CPP_FILES crazyTest.cpp ../ExamDetails/ExamDetails.cpp)
+set(CPP_FILES crazyTest.cpp)
 
 add_executable(list ${CPP_FILES})
