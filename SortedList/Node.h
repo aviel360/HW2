@@ -73,7 +73,7 @@ namespace mtm{
     }
 
     /**
-     * @brief - checking if 2 Nodes equal
+     * @brief - checking if 2 Nodes are equal
      * 
      * @tparam T -  generic value
      * @param node 
