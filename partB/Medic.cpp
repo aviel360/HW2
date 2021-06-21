@@ -27,7 +27,12 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
         if(src.distance(src, dst) > range){
             throw OutOfRange();
         }
-        if(ammo == 0){
+        if(board[dst.row][dst.col] != nullptr && board[dst.row][dst.col]->getTeam() == this->getTeam()
+                                                && board[dst.row][dst.col] != board[src.row][src.col]){
+            board[dst.row][ dst.col]->increaseHealth(power);
+            return;
+        }
+        if(ammo == 0 && board[dst.row][dst.col] != board[src.row][src.col]){
             throw OutOfAmmo();
         }
         if(board[dst.row][ dst.col] == nullptr || board[dst.row][ dst.col] == board[src.row][ src.col]){
@@ -36,9 +41,6 @@ std::shared_ptr<Character> shared_nullptr(nullptr);
         if(board[dst.row][dst.col]->getTeam() != team ){
             ammo--;
             board[dst.row][dst.col]->decreaseHealth(power);
-        }
-        if(board[dst.row][ dst.col]->getTeam() == team ){
-            board[dst.row][ dst.col]->increaseHealth(power);
         }
     }
 
