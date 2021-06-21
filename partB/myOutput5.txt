@@ -1,0 +1,2255 @@
+executing line: 2
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 3
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 4
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 5
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | |n|
+*************
+executing line: 6
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | |n|
+*************
+executing line: 7
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | |n|
+*************
+executing line: 8
+A game related error has occurred: MoveTooFar
+executing line: 9
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | |n|
+*************
+executing line: 10
+A game related error has occurred: OutOfRange
+executing line: 11
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | |n|
+*************
+executing line: 12
+A game related error has occurred: CellEmpty
+executing line: 13
+A game related error has occurred: OutOfRange
+executing line: 14
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | |n|
+*************
+executing line: 15
+A game related error has occurred: OutOfRange
+executing line: 16
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 17
+A game related error has occurred: CellEmpty
+executing line: 18
+A game related error has occurred: MoveTooFar
+executing line: 19
+A game related error has occurred: OutOfRange
+executing line: 20
+A game related error has occurred: OutOfRange
+executing line: 21
+A game related error has occurred: MoveTooFar
+executing line: 22
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 23
+A game related error has occurred: OutOfRange
+executing line: 24
+A game related error has occurred: IllegalTarget
+executing line: 25
+A game related error has occurred: IllegalCell
+executing line: 26
+A game related error has occurred: IllegalTarget
+executing line: 27
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 28
+A game related error has occurred: OutOfRange
+executing line: 29
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 30
+A game related error has occurred: OutOfRange
+executing line: 31
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 32
+A game related error has occurred: OutOfRange
+executing line: 33
+A game related error has occurred: MoveTooFar
+executing line: 34
+A game related error has occurred: CellEmpty
+executing line: 35
+A game related error has occurred: MoveTooFar
+executing line: 36
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 37
+A game related error has occurred: MoveTooFar
+executing line: 38
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 39
+A game related error has occurred: MoveTooFar
+executing line: 40
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 41
+A game related error has occurred: IllegalCell
+executing line: 42
+A game related error has occurred: OutOfRange
+executing line: 43
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 44
+A game related error has occurred: MoveTooFar
+executing line: 45
+A game related error has occurred: MoveTooFar
+executing line: 46
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 47
+A game related error has occurred: CellEmpty
+executing line: 48
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |s| | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 49
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 50
+A game related error has occurred: MoveTooFar
+executing line: 51
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 52
+A game related error has occurred: CellEmpty
+executing line: 53
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 54
+A game related error has occurred: OutOfRange
+executing line: 55
+A game related error has occurred: IllegalTarget
+executing line: 56
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|M| | | | | |
+*************
+executing line: 57
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+*************
+executing line: 58
+A game related error has occurred: CellEmpty
+executing line: 59
+A game related error has occurred: OutOfRange
+executing line: 60
+A game related error has occurred: IllegalTarget
+executing line: 61
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 62
+A game related error has occurred: IllegalTarget
+executing line: 63
+A game related error has occurred: IllegalTarget
+executing line: 64
+A game related error has occurred: OutOfRange
+executing line: 65
+A game related error has occurred: IllegalTarget
+executing line: 66
+A game related error has occurred: OutOfRange
+executing line: 67
+A game related error has occurred: OutOfRange
+executing line: 68
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 69
+A game related error has occurred: OutOfRange
+executing line: 70
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 71
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 72
+A game related error has occurred: OutOfRange
+executing line: 73
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 74
+A game related error has occurred: OutOfRange
+executing line: 75
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 76
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 77
+A game related error has occurred: OutOfRange
+executing line: 78
+A game related error has occurred: OutOfRange
+executing line: 79
+A game related error has occurred: MoveTooFar
+executing line: 80
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 81
+A game related error has occurred: IllegalTarget
+executing line: 82
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 83
+A game related error has occurred: MoveTooFar
+executing line: 84
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 85
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 86
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 87
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 88
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 89
+A game related error has occurred: IllegalCell
+executing line: 90
+A game related error has occurred: MoveTooFar
+executing line: 91
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 92
+A game related error has occurred: MoveTooFar
+executing line: 93
+A game related error has occurred: IllegalTarget
+executing line: 94
+A game related error has occurred: IllegalCell
+executing line: 95
+A game related error has occurred: IllegalTarget
+executing line: 96
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 97
+A game related error has occurred: IllegalTarget
+executing line: 98
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 99
+A game related error has occurred: OutOfRange
+executing line: 100
+A game related error has occurred: IllegalTarget
+executing line: 101
+A game related error has occurred: OutOfRange
+executing line: 102
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |M| | | |
+| | | | | | |
+| | | | | | |
+*************
+executing line: 103
+A game related error has occurred: MoveTooFar
+executing line: 104
+A game related error has occurred: MoveTooFar
+executing line: 105
+A game related error has occurred: MoveTooFar
+executing line: 106
+A game related error has occurred: MoveTooFar
+executing line: 107
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 108
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 109
+A game related error has occurred: IllegalTarget
+executing line: 110
+A game related error has occurred: MoveTooFar
+executing line: 111
+A game related error has occurred: OutOfRange
+executing line: 112
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 113
+A game related error has occurred: OutOfRange
+executing line: 114
+A game related error has occurred: OutOfRange
+executing line: 115
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 116
+A game related error has occurred: MoveTooFar
+executing line: 117
+A game related error has occurred: OutOfAmmo
+executing line: 118
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | |S| | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 119
+A game related error has occurred: OutOfRange
+executing line: 120
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 121
+A game related error has occurred: OutOfRange
+executing line: 122
+A game related error has occurred: IllegalTarget
+executing line: 123
+A game related error has occurred: OutOfAmmo
+executing line: 124
+A game related error has occurred: IllegalCell
+executing line: 125
+A game related error has occurred: OutOfAmmo
+executing line: 126
+A game related error has occurred: OutOfRange
+executing line: 127
+A game related error has occurred: OutOfRange
+executing line: 128
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 129
+A game related error has occurred: OutOfRange
+executing line: 130
+A game related error has occurred: OutOfRange
+executing line: 131
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 132
+A game related error has occurred: OutOfRange
+executing line: 133
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 134
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 135
+A game related error has occurred: MoveTooFar
+executing line: 136
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 137
+A game related error has occurred: OutOfRange
+executing line: 138
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 139
+A game related error has occurred: OutOfRange
+executing line: 140
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 141
+A game related error has occurred: MoveTooFar
+executing line: 142
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 143
+A game related error has occurred: OutOfRange
+executing line: 144
+A game related error has occurred: MoveTooFar
+executing line: 145
+A game related error has occurred: OutOfAmmo
+executing line: 146
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 147
+A game related error has occurred: CellEmpty
+executing line: 148
+A game related error has occurred: MoveTooFar
+executing line: 149
+A game related error has occurred: MoveTooFar
+executing line: 150
+A game related error has occurred: OutOfRange
+executing line: 151
+A game related error has occurred: OutOfRange
+executing line: 152
+A game related error has occurred: OutOfRange
+executing line: 153
+A game related error has occurred: OutOfRange
+executing line: 154
+A game related error has occurred: OutOfRange
+executing line: 155
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 156
+A game related error has occurred: IllegalCell
+executing line: 157
+A game related error has occurred: MoveTooFar
+executing line: 158
+A game related error has occurred: OutOfRange
+executing line: 159
+A game related error has occurred: OutOfRange
+executing line: 160
+A game related error has occurred: IllegalTarget
+executing line: 161
+A game related error has occurred: OutOfRange
+executing line: 162
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 163
+A game related error has occurred: OutOfRange
+executing line: 164
+A game related error has occurred: MoveTooFar
+executing line: 165
+A game related error has occurred: IllegalTarget
+executing line: 166
+A game related error has occurred: OutOfRange
+executing line: 167
+A game related error has occurred: OutOfRange
+executing line: 168
+A game related error has occurred: OutOfRange
+executing line: 169
+A game related error has occurred: OutOfRange
+executing line: 170
+A game related error has occurred: MoveTooFar
+executing line: 171
+A game related error has occurred: MoveTooFar
+executing line: 172
+A game related error has occurred: IllegalTarget
+executing line: 173
+A game related error has occurred: IllegalCell
+executing line: 174
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 175
+A game related error has occurred: MoveTooFar
+executing line: 176
+A game related error has occurred: OutOfRange
+executing line: 177
+A game related error has occurred: IllegalTarget
+executing line: 178
+A game related error has occurred: CellEmpty
+executing line: 179
+A game related error has occurred: OutOfRange
+executing line: 180
+A game related error has occurred: OutOfRange
+executing line: 181
+A game related error has occurred: OutOfRange
+executing line: 182
+A game related error has occurred: IllegalTarget
+executing line: 183
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 184
+A game related error has occurred: OutOfRange
+executing line: 185
+A game related error has occurred: OutOfRange
+executing line: 186
+A game related error has occurred: MoveTooFar
+executing line: 187
+A game related error has occurred: MoveTooFar
+executing line: 188
+A game related error has occurred: OutOfRange
+executing line: 189
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 190
+A game related error has occurred: MoveTooFar
+executing line: 191
+A game related error has occurred: OutOfRange
+executing line: 192
+A game related error has occurred: MoveTooFar
+executing line: 193
+A game related error has occurred: OutOfRange
+executing line: 194
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 195
+A game related error has occurred: OutOfRange
+executing line: 196
+A game related error has occurred: MoveTooFar
+executing line: 197
+A game related error has occurred: OutOfRange
+executing line: 198
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 199
+*************
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | |s| | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+|S| | | | | |
+| | | | | | |
+| | | | | | |
+| | | | |M| |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| |M| | | | |
+*************
+executing line: 200
+A game related error has occurred: OutOfRange
+executing line: 201
+A game related error has occurred: OutOfRange
+executing line: 202
+A game related error has occurred: OutOfRange
+executing line: 203
+A game related error has occurred: IllegalTarget
+executing line: 204
+A game related error has occurred: OutOfRange
+executing line: 205
