@@ -135,6 +135,7 @@ CMakeFiles/list.dir/crazyTest.cpp.obj: ../crazyTest.cpp \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc \
   ../SortedList.h \
   ../Node.h \
+  C:/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.h \
   C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h \
   ../testClass.h \
   C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/stdbool.h
@@ -411,5 +412,7 @@ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/bits/istream.tcc:
 ../SortedList.h:
 
 ../Node.h:
+
+C:/Users/avial/OneDrive/Documents/GitHub/HW2/ExamDetails/ExamDetails.h:
 
 C:/TDM-GCC-64/x86_64-w64-mingw32/include/assert.h:

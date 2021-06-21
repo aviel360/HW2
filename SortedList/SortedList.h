@@ -83,9 +83,9 @@ namespace mtm{
     template <class T>
     void deleteList(Node<T>* current){
         while(current != nullptr){
-            Node<T>* temp = current->getNext();
-            delete current;
-            current = temp;
+            Node<T>* temp = current;
+            current = current->getNext();
+            delete temp;
         }
     }
 
@@ -95,6 +95,7 @@ namespace mtm{
             return *this; 
         }
         deleteList(first->getNext());
+        first->setNext(nullptr);
         Node<T>* current = list.first->getNext();
         while(current != nullptr){
             this->insert(current->getValue());
@@ -121,9 +122,6 @@ namespace mtm{
 
     template <class T>
     typename SortedList<T>::const_iterator SortedList<T>::begin() const{
-        if(first->getNext() == nullptr){
-            throw std::out_of_range ("Out Of Range!");
-        }
         return SortedList<T>::const_iterator(first->getNext());
     }
 
