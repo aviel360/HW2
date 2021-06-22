@@ -1,3 +1,5 @@
+/*the docomentation is in the character class, for the shared functions */
+
 #ifndef SOLDIER_H
 #define SOLDIER_H
 #include "Character.h"

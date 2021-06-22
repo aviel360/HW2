@@ -1,3 +1,5 @@
+/*the docomentation is in the character class, for the shared functions */
+
 #ifndef SNIPER_H
 #define SNIPER_H
 #include "Character.h"

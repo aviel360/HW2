@@ -1,3 +1,5 @@
+/*the docomentation is in the character class, for the shared functions */
+
 #ifndef MEDIC_H
 #define MEDIC_H
 #include "Character.h"
