@@ -23,7 +23,8 @@ namespace mtm{
 
         public: 
         /**
-         * @brief Construct a new Character object
+         * @brief Construct a new Character object, due to the class being abstract this is only used when creating a 
+         *        known type character(Medic/Sniper/Soldier). 
          * 
          * @param team 
          * @param health 
@@ -36,14 +37,15 @@ namespace mtm{
         Character& operator=(const Character&) = default;
         virtual ~Character() = default;
         /**
-         * @brief moves the character from the first point to the second 
+         * @brief moves the character from the first point to the second each character has maximum movement range,
+         *        detailed in their respective .h.
          * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the character
          */
         virtual void move(Board& board, const GridPoint& src, const GridPoint& dst) = 0;
         /**
-         * @brief make the character attack 
+         * @brief make the character attack, each character has different attack pattern detailed in their respective .h. 
          * 
         * @param board - the game board 
          * @param src - the current place of the character
@@ -104,7 +106,7 @@ namespace mtm{
          */
         void decreaseHealth(units_t damage);
         /**
-         * @brief lower the health of the character by this number
+         * @brief increase the health of the character by this number
          * 
          * @param heal 
          */

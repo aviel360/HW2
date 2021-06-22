@@ -42,14 +42,16 @@ namespace mtm{
          */
         ~Medic() = default;
         /**
-         * @brief moves the character from the first point to the second 
+         * @brief moves the character from the first point to the second, max movement range for Medic is 5 squares.
          * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the character
          */
         void move(Board& board, const GridPoint& src, const GridPoint& dst) override;
         /**
-         * @brief make the character attack 
+         * @brief make the character attack or heal, healing allies doesn't require ammo,
+         *        if the dst target is an enemy the medic attacks it. 
+         *        The damage/heal equals the character's power.
          * 
         * @param board - the game board 
          * @param src - the current place of the character
@@ -57,7 +59,7 @@ namespace mtm{
          */
         void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**
-         * @brief - make the character reload
+         * @brief - make the character reload 5 ammo.
          * 
          */
         void reload() override;
