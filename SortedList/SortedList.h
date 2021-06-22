@@ -246,6 +246,7 @@ namespace mtm{
      * @brief return the value which the iterator points on 
      * 
      * @tparam T - - generic value
+     * @exception std::out_of_range ("Out of rannge!") if the iterator points on nullptr
      * @return const T& - T value
      */
     template <class T>
@@ -260,6 +261,7 @@ namespace mtm{
      * @brief moving the iterator one step forword
      * 
      * @tparam T - generic value
+     * @exception std::out_of_range ("Out of rannge!") if the iterator points on nullptr
      * @return SortedList<T>::const_iterator& 
      */
     template <class T>
@@ -300,7 +302,8 @@ namespace mtm{
     /**
      * @brief moving the const iterator this number of steps forword
      * 
-     * @tparam T  - generic value 
+     * @tparam T  - generic value
+     * @exception std::out_of_range ("Out of rannge!") if the iterator points on nullptr 
      * @return SortedList<T>::const_iterator& 
      */
     template <class T>
