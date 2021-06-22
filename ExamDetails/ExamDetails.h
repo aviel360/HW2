@@ -20,7 +20,9 @@ namespace mtm{
          * @param day  -  an integer between 1 to 30
          * @param hour - time in exactly halfs of an hour
          * @param length - a positive integer
-         * @param link  - string with the link to the exam 
+         * @param link  - string with the link to the exam
+         * @exception InvalidDateException if date is invalid
+         * @exception InvalidTimeException if time is invalid
          */
         ExamDetails(int course, int month, int day, double hour, int length, std::string link = "");
         /**
@@ -57,10 +59,34 @@ namespace mtm{
          * @param link string with the link to the exam
          */
         void setLink(std::string link);
-        
+        /**
+         * @brief returns the amount of days between 2 exams
+         * 
+         * @param exam - the exam to compare with
+         * @return int - numbers of days between the 2 exams
+         */
         int operator-(const ExamDetails& exam) const;
+        /**
+         * @brief check if the left exam's date is before the second exam's date 
+         * 
+         * @param exam -  the exam to compare with
+         * @return true - if the left exam's date is before the second exam's date 
+         * @return false - if the left exam's date is after the second exam's date 
+         */
         bool operator<(const ExamDetails& exam) const; 
+        /**
+         * @brief prints the details of the exam
+         * 
+         * @param os the output channal
+         * @param exam the exam who will be printed
+         * @return std::ostream& 
+         */
         friend std::ostream& operator<<(std::ostream& os, const ExamDetails& exam);
+        /**
+         * @brief builds a new defoult exam
+         * 
+         * @return ExamDetails object
+         */
         static ExamDetails makeMatamExam();
         class InvalidDateException : public std::exception{};
         class InvalidTimeException : public std::exception{};
