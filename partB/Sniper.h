@@ -55,11 +55,13 @@ namespace mtm{
          * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the attack
+         * @exception MoveTooFar if isnt a valid move
+         * @exception CellOccupied if dst cell is occupied
          */
         void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**
          * @brief - make the character reload
-         * 
+         * @exception - 
          */
         void reload() override;
         /**
