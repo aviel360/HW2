@@ -1,6 +1,7 @@
 #ifndef SORTEDLIST_H
 #define SORTEDLIST_H
 #include <iostream>
+#include <stdexcept>
 #include "Node.h"
 
 namespace mtm{

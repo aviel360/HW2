@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath> 
-#include "ExamDetails.h"
+#include "examDetails.h"
 #include "sortedList.h"
 
 #define DAYS_IN_MONTH 30
