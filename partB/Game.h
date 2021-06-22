@@ -127,7 +127,8 @@ namespace mtm{
          */
         void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
         /**
-         * @brief moves the character from the first point to the second 
+         * @brief moves the character from the first point to the second, each character has maximum movement 
+         *        in thier respective .h.
          * 
          * @param src_coordinates  - the current place of the character
          * @param dst_coordinates - the destination for the character
@@ -138,7 +139,7 @@ namespace mtm{
          */
         virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
         /**
-         * @brief - make the character attack 
+         * @brief - make the character attack, each character has special attack pattern in thier respective .h.
          * 
          * @param src_coordinates - the current place of the character
          * @param dst_coordinates - the destination for the attack
@@ -150,7 +151,7 @@ namespace mtm{
          */
         void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
         /**
-         * @brief - make the character reload
+         * @brief - make the character reload, each character has different reload amount in thier respective .h.
          * 
          * @param coordinates - the coordinates of the character
          * @exception IllegalCell if the cell is outside of the board
