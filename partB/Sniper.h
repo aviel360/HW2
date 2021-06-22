@@ -62,7 +62,9 @@ namespace mtm{
         void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**
          * @brief - make the character reload 2 ammo.
-         * @exception - 
+         * @exception OutOfRange if the destination is too far for this character
+         * @exception OutOfAmmo if this characterw's ammo is zero
+         * @exception IllegalTarget if the the terget is illegal
          */
         void reload() override;
         /**

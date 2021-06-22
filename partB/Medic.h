@@ -58,6 +58,9 @@ namespace mtm{
         * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the attack
+         * @exception OutOfRange if the destination is too far for this character
+         * @exception OutOfAmmo if this characterw's ammo is zero
+         * @exception IllegalTarget if the the terget is illegal
          */
         void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**

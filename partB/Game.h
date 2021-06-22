@@ -96,6 +96,7 @@ namespace mtm{
          * 
          * @param height 
          * @param width 
+         * @exception IllegalArgument if height or width isnt positive numbers.
          */
         Game(int height, int width);
         /**
@@ -121,6 +122,8 @@ namespace mtm{
          * 
          * @param coordinates - the coordinates for the character
          * @param character - the new character
+         * @exception IllegalCell if the cell is outside of the board
+         * @exception CellOccupied if there is already a character at this cell
          */
         void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
         /**
@@ -128,6 +131,10 @@ namespace mtm{
          * 
          * @param src_coordinates  - the current place of the character
          * @param dst_coordinates - the destination for the character
+         * @exception MoveTooFar if it isnt a valid move
+         * @exception CellOccupied if dst cell is occupied
+         * @exception IllegalCell if one of the cells is outside of the boards
+         * @exception CellEmpty if there is no character at the source cell
          */
         virtual void move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates);
         /**
@@ -135,12 +142,19 @@ namespace mtm{
          * 
          * @param src_coordinates - the current place of the character
          * @param dst_coordinates - the destination for the attack
+         * @exception OutOfRange if the destination is too far for this character
+         * @exception OutOfAmmo if this characterw's ammo is zero
+         * @exception IllegalTarget if the the terget is illegal
+         * @exception IllegalCell if one of the cells is outside of the boards
+         * @exception CellEmpty if there is no character at the source cell
          */
         void attack(const GridPoint & src_coordinates, const GridPoint & dst_coordinates);
         /**
          * @brief - make the character reload
          * 
          * @param coordinates - the coordinates of the character
+         * @exception IllegalCell if the cell is outside of the board
+         * @exception CellEmpty if there is no character at this cell
          */
         void reload(const GridPoint & coordinates);
         /**
@@ -152,6 +166,8 @@ namespace mtm{
          * @param ammo 
          * @param range 
          * @param power 
+         * @exception IllegalArgument if one of the arguments is invalid
+         * @exception CellEmpty if there is no character at the source cell
          * @return std::shared_ptr<Character> 
          */
         static std::shared_ptr<Character> makeCharacter(CharacterType type, Team team,

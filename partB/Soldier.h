@@ -51,6 +51,7 @@ namespace mtm{
          * @param src - the current place of the character
          * @param dst - the destination for the character
          * @exception MoveTooFar if it isnt a valid move
+         * @exception CellOccupied if dst cell is occupied
          */
         virtual void move(Board& board, const GridPoint& src, const GridPoint& dst) override;
         /**
@@ -61,8 +62,9 @@ namespace mtm{
         * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the attack
-         * @exception MoveTooFar if isnt a valid move
-         * @exception CellOccupied if dst cell is occupied
+         * @exception OutOfRange if the destination is too far for this character
+         * @exception OutOfAmmo if this characterw's ammo is zero
+         * @exception IllegalTarget if the the terget is illegal
          */
         virtual void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**
