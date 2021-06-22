@@ -62,7 +62,7 @@ namespace mtm{
          */
         virtual char getSymbol() = 0;
         /**
-         * @brief a "vuretual copy constructor" for copying the character deatils to a new character
+         * @brief a "virtual copy constructor" for copying the character deatils to a new character
          * 
          * @return std::shared_ptr<Character> 
          */
