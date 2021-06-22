@@ -43,14 +43,15 @@ namespace mtm{
          */
         ~Sniper() = default;
         /**
-         * @brief moves the character from the first point to the second 
+         * @brief moves the character from the first point to the second, max movement range for Sniper is 4 squares.
          * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the character
          */
         void move(Board& board, const GridPoint& src, const GridPoint& dst) override;
         /**
-         * @brief make the character attack 
+         * @brief make the character attack, enemies which are within the character's range but not the ones 
+         *        that are closer than the Sniper's range / 2. Every third attack the Sniper does double damage. 
          * 
          * @param board - the game board 
          * @param src - the current place of the character
@@ -60,7 +61,7 @@ namespace mtm{
          */
         void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**
-         * @brief - make the character reload
+         * @brief - make the character reload 2 ammo.
          * @exception - 
          */
         void reload() override;

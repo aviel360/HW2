@@ -46,7 +46,7 @@ namespace mtm{
          */
         ~Soldier() = default;
         /**
-         * @brief moves the character from the first point to the second 
+         * @brief moves the character from the first point to the second, max movement range for Soldier is 3 squares.
          * @param board - the game board 
          * @param src - the current place of the character
          * @param dst - the destination for the character
@@ -54,7 +54,9 @@ namespace mtm{
          */
         virtual void move(Board& board, const GridPoint& src, const GridPoint& dst) override;
         /**
-         * @brief make the character attack 
+         * @brief make the character attack anything in the same row or colum of the Soldier within its range
+         *        whether its an ally or a foe or en empty square, although only enemies will suffer damage.
+         *        This character's attack expand to enemies within its AOE, more details in aoeAttack function.
          * 
         * @param board - the game board 
          * @param src - the current place of the character
@@ -64,7 +66,7 @@ namespace mtm{
          */
         virtual void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         /**
-         * @brief - make the character reload
+         * @brief - make the character reload 3 ammo.
          * 
          */
         virtual void reload() override;
@@ -75,7 +77,8 @@ namespace mtm{
          */
         virtual char getSymbol() override ;
         /**
-         * @brief make the soldier attack the rest of the characters in his attack range
+         * @brief the Soldier's AOE is any enemies within distance of range / 3 of its initial attack location.
+         *        each enemy will lose damage equals to the Soldier's power / 2.
          * 
          * @param board - the game board
          * @param dst - coordinates to attack

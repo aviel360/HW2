@@ -37,7 +37,7 @@ namespace mtm{
         Character& operator=(const Character&) = default;
         virtual ~Character() = default;
         /**
-         * @brief moves the character from the first point to the second each character has maximum movement range,
+         * @brief moves the character from the first point to the second, each character has maximum movement range,
          *        detailed in their respective .h.
          * @param board - the game board 
          * @param src - the current place of the character
@@ -53,7 +53,7 @@ namespace mtm{
          */
         virtual void attack(Board& board, const GridPoint& src, const GridPoint& dst) = 0;
         /**
-         * @brief - make the character reload
+         * @brief - make the character reload, each character has reload amount which is detailed in thier respective .h.
          * 
          */
         virtual void reload() = 0;
