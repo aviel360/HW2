@@ -21,6 +21,12 @@ namespace mtm{
         virtual void attack(Board& board, const GridPoint& src, const GridPoint & dst) override;
         virtual void reload() override;
         virtual char getSymbol() override ;
+        /**
+         * @brief make the soldier attack the rest of the characters in his attack range
+         * 
+         * @param board - the game board
+         * @param dst - coordinates to attack
+         */
         void aoeAttack(Board& board, const GridPoint & dst);
     };
 }

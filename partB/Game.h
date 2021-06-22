@@ -158,7 +158,7 @@ namespace mtm{
                     units_t health, units_t ammo, units_t range, units_t power);
         
         /**
-         * @brief return if one of the teams has one 
+         * @brief return if one of the teams has won 
          * 
          * @param winningTeam 
          * @return true - if all the character from the board belongs to a single team 
@@ -166,6 +166,13 @@ namespace mtm{
          */
         bool isOver(Team* winningTeam=NULL) const;
 
+        /**
+         * @brief prints the board with symbuls represeting the characters and their locations
+         * 
+         * @param os - output channals
+         * @param game - the game board
+         * @return std::ostream& 
+         */
         friend std::ostream& operator<<(std::ostream& os, const Game& game);      
     };
 }
