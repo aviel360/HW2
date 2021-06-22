@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath> 
 #include "ExamDetails.h"
-#include "SortedList.h"
+#include "sortedList.h"
 
 #define DAYS_IN_MONTH 30
 #define HALF_HOUR 3
