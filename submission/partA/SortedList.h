@@ -252,7 +252,7 @@ namespace mtm{
     template <class T>
     const T& SortedList<T>::const_iterator::operator*() const{ 
         if(current == nullptr){
-            throw std::out_of_range ("Out of rannge!");
+            throw std::out_of_range ("Out of range!");
         }
         return current->getValue();
     }
